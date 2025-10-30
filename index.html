@@ -7435,7 +7435,7 @@ main {
 <main>
 <div class="reveal">
 <div class="slides"><section><section>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=c615b7a3">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=36333e60">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -7446,7 +7446,7 @@ main {
 </div>
 </div>
 </div></section><section>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=ab6b7ab0">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=370cc163">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -7457,7 +7457,7 @@ main {
 </div>
 </div>
 </div>
-</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=5a388f68">
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=6a87be6b">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -7486,7 +7486,7 @@ main {
 </div>
 </div>
 </div></section></section><section><section>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=bbd6f147">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=02d4d78a">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -7507,35 +7507,50 @@ main {
 </div>
 </div>
 </div></section></section><section><section>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=d8987378">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=b95281b9">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h1 id="The-compile()-function:-Precompile-a-attern">The <strong>compile()</strong> function: Precompile a attern<a class="anchor-link" href="#The-compile()-function:-Precompile-a-attern">¶</a></h1><hr/>
+<h1 id="The-compile()-function:-Precompile-a-pattern">The <strong>compile()</strong> function: Precompile a pattern<a class="anchor-link" href="#The-compile()-function:-Precompile-a-pattern">¶</a></h1><hr/>
 <h2 id="Compile-a-regular-expression-pattern-into-a-regular-expression-object.">Compile a regular expression pattern into a regular expression object.<a class="anchor-link" href="#Compile-a-regular-expression-pattern-into-a-regular-expression-object.">¶</a></h2><blockquote>
 <h2 id="using-re.compile()-and-saving-the-resulting-regular-expression-object-for-reuse-is-more-efficient-when-the-expression-will-be-used-several-times-in-a-single-program.">using re.compile() and saving the resulting regular expression object for reuse is more efficient when the expression will be used several times in a single program.<a class="anchor-link" href="#using-re.compile()-and-saving-the-resulting-regular-expression-object-for-reuse-is-more-efficient-when-the-expression-will-be-used-several-times-in-a-single-program.">¶</a></h2><h3 id="re.compile(pattern,-flags=0)"><code>re.compile(pattern, flags=0)</code><a class="anchor-link" href="#re.compile(pattern,-flags=0)">¶</a></h3></blockquote>
 </div>
 </div>
 </div>
-</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=f809febc">
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=91c141f9">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [2]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [4]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">pattern</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">"09\d+"</span>
-<span class="n">regex</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="n">pattern</span><span class="p">)</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">re_pattern</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">"09\d+"</span>
+<span class="n">regex</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="n">re_pattern</span><span class="p">)</span>
+
+<span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="n">re_pattern</span><span class="p">,</span> <span class="s1">'0912345678'</span><span class="p">)</span>
+<span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="n">regex</span><span class="p">,</span> <span class="s1">'0912345678'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
 </div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[4]:</div>
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
+<pre>&lt;re.Match object; span=(0, 10), match='0912345678'&gt;</pre>
+</div>
+</div>
+</div>
+</div>
 </div></section><section>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=2b86b6c4">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=6396ce99">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -7554,7 +7569,7 @@ main {
 </div>
 </div>
 </div>
-</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=63321151">
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=dc13e77a">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -7597,7 +7612,7 @@ main {
 </div>
 </div>
 </div>
-</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=39e7da69">
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=605dcdc9">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -7644,7 +7659,7 @@ main {
 </div>
 </div>
 </div>
-</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=66a4b24e">
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=1f4c8725">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -7670,7 +7685,7 @@ main {
 </div>
 </div>
 </div></section></section><section><section>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=30b371c9">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=4089b00a">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -7681,7 +7696,7 @@ main {
 </div>
 </div>
 </div>
-</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=ca10dbaf">
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=09b9c077">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -7713,7 +7728,7 @@ None
 </div>
 </div>
 </div></section></section><section><section>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=e628460f">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=7328e375">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -7724,7 +7739,7 @@ None
 </div>
 </div>
 </div>
-</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=71247a83">
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=6d8c99f7">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -7757,7 +7772,7 @@ No match
 </div>
 </div>
 </div></section></section><section><section>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=25f133b5">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=5ffb0d2e">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -7768,16 +7783,16 @@ No match
 </div>
 </div>
 </div>
-</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=5b28d8ea">
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=e5ac9641">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [9]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [4]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">re</span><span class="o">.</span><span class="n">fullmatch</span><span class="p">(</span><span class="sa">r</span><span class="s2">"\d</span><span class="si">{4}</span><span class="s2">-\d</span><span class="si">{2}</span><span class="s2">-\d</span><span class="si">{2}</span><span class="s2">"</span><span class="p">,</span> <span class="s2">"2025-10-31"</span><span class="p">))</span>  
-<span class="nb">print</span><span class="p">(</span><span class="n">re</span><span class="o">.</span><span class="n">fullmatch</span><span class="p">(</span><span class="sa">r</span><span class="s2">"\d</span><span class="si">{4}</span><span class="s2">-\d</span><span class="si">{2}</span><span class="s2">-\d</span><span class="si">{2}</span><span class="s2">"</span><span class="p">,</span> <span class="s2">"Date 2025-10-31"</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">re</span><span class="o">.</span><span class="n">fullmatch</span><span class="p">(</span><span class="sa">r</span><span class="s2">"\d</span><span class="si">{4}</span><span class="s2">-\d</span><span class="si">{2}</span><span class="s2">-\d</span><span class="si">{2}</span><span class="s2">"</span><span class="p">,</span> <span class="s2">"2025-10-31 Date"</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
@@ -7798,7 +7813,7 @@ None
 </div>
 </div>
 </div></section></section><section><section>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=1583b0f3">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=4ab2a679">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -7809,12 +7824,12 @@ None
 </div>
 </div>
 </div>
-</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=ba81ee10">
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=ce5ca796">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [10]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [9]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="sa">r</span><span class="s2">"\b\w</span><span class="si">{3}</span><span class="s2">\b"</span><span class="p">,</span> <span class="s2">"cat dog elephant fox"</span><span class="p">))</span> 
@@ -7839,7 +7854,7 @@ None
 </div>
 </div>
 </div></section></section><section><section>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=248ea1ca">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=d1880795">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -7850,12 +7865,12 @@ None
 </div>
 </div>
 </div>
-</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=ddf1498e">
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=27f31eda">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [11]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [10]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">re_find</span> <span class="ow">in</span> <span class="n">re</span><span class="o">.</span><span class="n">finditer</span><span class="p">(</span><span class="sa">r</span><span class="s2">"\d</span><span class="si">{4}</span><span class="s2">-\d</span><span class="si">{2}</span><span class="s2">-\d</span><span class="si">{2}</span><span class="s2">"</span><span class="p">,</span> <span class="s2">"Today is 2025-10-31. Yesterday was 2025-10-30. Tomorrow will be 2025-11-01"</span><span class="p">):</span>
@@ -7880,12 +7895,12 @@ None
 </div>
 </div>
 </div>
-</div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=317658e7">
+</div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=ce512aef">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [12]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [11]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="n">re_find</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">re</span><span class="o">.</span><span class="n">finditer</span><span class="p">(</span><span class="sa">r</span><span class="s2">"\d</span><span class="si">{4}</span><span class="s2">-\d</span><span class="si">{2}</span><span class="s2">-\d</span><span class="si">{2}</span><span class="s2">"</span><span class="p">,</span> <span class="s2">"Today is 2025-10-31. Yesterday was 2025-10-30. Tomorrow will be 2025-11-01"</span><span class="p">)):</span>
@@ -7911,27 +7926,29 @@ None
 </div>
 </div>
 </div></div></section></section><section><section>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=8364c3f7">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=7d6ebbd0">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <h1 id="The-split()-function:-Split-string-by-pattern">The <strong>split()</strong> function: Split string by pattern<a class="anchor-link" href="#The-split()-function:-Split-string-by-pattern">¶</a></h1><hr/>
-<h2 id="Split-string-by-the-occurrences-of-pattern.-If-capturing-parentheses-are-used-in-pattern,-then-the-text-of-all-groups-in-the-pattern-are-also-returned-as-part-of-the-resulting-list.-If-maxsplit-is-nonzero,-at-most-maxsplit-splits-occur,-and-the-remainder-of-the-string-is-returned-as-the-final-element-of-the-list.">Split string by the occurrences of pattern. If capturing parentheses are used in pattern, then the text of all groups in the pattern are also returned as part of the resulting list. If maxsplit is nonzero, at most maxsplit splits occur, and the remainder of the string is returned as the final element of the list.<a class="anchor-link" href="#Split-string-by-the-occurrences-of-pattern.-If-capturing-parentheses-are-used-in-pattern,-then-the-text-of-all-groups-in-the-pattern-are-also-returned-as-part-of-the-resulting-list.-If-maxsplit-is-nonzero,-at-most-maxsplit-splits-occur,-and-the-remainder-of-the-string-is-returned-as-the-final-element-of-the-list.">¶</a></h2><h3 id="re.split(pattern,-string,-maxsplit=0,-flags=0)"><code>re.split(pattern, string, maxsplit=0, flags=0)</code><a class="anchor-link" href="#re.split(pattern,-string,-maxsplit=0,-flags=0)">¶</a></h3>
+<h2 id="Split-string-by-the-occurrences-of-pattern.-If-capturing-parenthesis-are-used-in-pattern,-then-the-text-of-all-groups-in-the-pattern-are-also-returned-as-part-of-the-resulting-list.-If-maxsplit-is-nonzero,-at-most-maxsplit-splits-occur,-and-the-remainder-of-the-string-is-returned-as-the-final-element-of-the-list.">Split string by the occurrences of pattern. If capturing parenthesis are used in pattern, then the text of all groups in the pattern are also returned as part of the resulting list. If maxsplit is nonzero, at most maxsplit splits occur, and the remainder of the string is returned as the final element of the list.<a class="anchor-link" href="#Split-string-by-the-occurrences-of-pattern.-If-capturing-parenthesis-are-used-in-pattern,-then-the-text-of-all-groups-in-the-pattern-are-also-returned-as-part-of-the-resulting-list.-If-maxsplit-is-nonzero,-at-most-maxsplit-splits-occur,-and-the-remainder-of-the-string-is-returned-as-the-final-element-of-the-list.">¶</a></h2><h3 id="re.split(pattern,-string,-maxsplit=0,-flags=0)"><code>re.split(pattern, string, maxsplit=0, flags=0)</code><a class="anchor-link" href="#re.split(pattern,-string,-maxsplit=0,-flags=0)">¶</a></h3>
 </div>
 </div>
 </div>
-</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=0441a89c">
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=f06d83ba">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [13]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [7]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">re</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="sa">r</span><span class="s2">"[,. ]+"</span><span class="p">,</span> <span class="s2">"apple,banana orange.grape"</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">re</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="sa">r</span><span class="s2">"([,. ])+"</span><span class="p">,</span> <span class="s2">"apple,banana orange.grape"</span><span class="p">))</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">re</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="sa">r</span><span class="s2">"[,. ]+"</span><span class="p">,</span> <span class="s2">"apple,banana orange.grape"</span><span class="p">,</span> <span class="n">maxsplit</span><span class="o">=</span><span class="mi">1</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">re</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="sa">r</span><span class="s2">"([,. ])+"</span><span class="p">,</span> <span class="s2">"apple,banana orange.grape"</span><span class="p">,</span> <span class="n">maxsplit</span><span class="o">=</span><span class="mi">1</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
@@ -7945,18 +7962,20 @@ None
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
 <pre>['apple', 'banana', 'orange', 'grape']
+['apple', ',', 'banana', ' ', 'orange', '.', 'grape']
 ['apple', 'banana orange.grape']
+['apple', ',', 'banana orange.grape']
 </pre>
 </div>
 </div>
 </div>
 </div>
-</div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=4692bf62">
+</div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=3b89c5a7">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [14]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [13]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">"apple,banana orange.grape"</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">','</span><span class="p">))</span>
@@ -7979,7 +7998,7 @@ None
 </div>
 </div>
 </div></div></section></section><section><section>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=d47275cd">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=71dce4f2">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -7990,12 +8009,12 @@ None
 </div>
 </div>
 </div>
-</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=8052a2b1">
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=f7e0917f">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [15]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [9]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s2">"\d+"</span><span class="p">,</span> <span class="s2">"#"</span><span class="p">,</span> <span class="s2">"ID123 and Code456"</span><span class="p">))</span>
@@ -8020,7 +8039,7 @@ Hello World, This Is Python Regex.
 </div>
 </div>
 </div></section></section><section><section>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=c65ca75e">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=89428618">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -8031,3078 +8050,30 @@ Hello World, This Is Python Regex.
 </div>
 </div>
 </div>
-</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=972e1365">
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=a0a2ae59">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [17]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [1]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">requests</span>
 <span class="n">url</span> <span class="o">=</span> <span class="s2">"https://idv.sinica.edu.tw/tigpbio/faculty.html"</span>
 <span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
 <span class="n">html_content</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">text</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">html_content</span><span class="p">)</span>
+<span class="c1">#print(html_content)</span>
 </pre></div>
 </div>
 </div>
 </div>
 </div>
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-
-&lt;head&gt;
-    &lt;link rel="shortcut icon" href="#"/&gt;
-    &lt;meta http-equiv="EXPIRES" content="0"&gt;
-    &lt;meta http-equiv="Content-Type" content="text/html; charset=utf-8"&gt;
-    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
-    &lt;meta http-equiv="X-UA-Compatible" content="ie=edge"&gt;
-
-
-    &lt;link rel="stylesheet" href="./css/bootsrtapmin431.css"&gt;
-    &lt;link rel="stylesheet" href="./css/mycss.css"&gt;
-    &lt;title&gt;
-        TIGP-Bioinfo.
-    &lt;/title&gt;
-    &lt;style type="text/css"&gt;
-
-        .auto-style1 {
-            background-color: #C8CBCF;
-        }
-
-        .auto-style5 {
-            text-align: center;
-            background-color: #FDE9D9;
-        }
-
-        .auto-style8 {
-            background-color: #FFE8A1;
-        }
-
-        .auto-style11 {
-            color: #000000;
-            background-color: #D9D9D9;
-        }
-
-        .auto-style13 {
-            color: #000000;
-            background-color: #FFE8A1;
-        }
-
-        .auto-style14 {
-            background-color: #FFFFFF
-        }
-
-        .auto-style16 {
-            color: #FF0000;
-            background-color: #FFE8A1;
-        }
-
-        .auto-style17 {
-            color: #000000;
-            background-color: #FFFFFF;
-        }
-
-        .auto-style19 {
-            background-color: #FFEEBA;
-            color: #FF0000;
-        }
-
-        .auto-style22 {
-            color: #FF0000;
-        }
-
-        .auto-style23 {
-            color: rgba(0, 0, 0, .5);
-            background-color: #FFFF00;
-        }
-
-        .auto-style24 {
-            background-color: #FDE9D9;
-        }
-
-        .auto-style25 {
-            color: #FF0000;
-            background-color: #FDE9D9;
-        }
-
-        .auto-style26 {
-            background-color: #D9D9D9;
-        }
-
-        .auto-style27 {
-            text-align: center;
-            background-color: #D9D9D9;
-        }
-
-        .auto-style28 {
-            background-color: #FDE9B1
-        }
-
-        .auto-style29 {
-            background-color: #FDE9B1;
-            color: #FF0000;
-        }
-
-    &lt;/style&gt;
-    &lt;link href="./css/wordstyle.css" rel="stylesheet" type="text/css"/&gt;
-
-&lt;/head&gt;
-
-&lt;body class="mag1"&gt;
-&lt;nav class="navbar fixed-top navbar-expand-lg navbar-light bg-nav mag1"&gt;
-    &lt;a class="navbar-brand fontwhite" href="index.html"&gt;TIGP-Bioinfo.&lt;/a&gt;
-    &lt;button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"&gt;
-        &lt;span class="navbar-toggler-icon"&gt;&lt;/span&gt;
-    &lt;/button&gt;
-    &lt;div class="collapse navbar-collapse" id="navbarSupportedContent"&gt;
-        &lt;ul class="navbar-nav ml-auto"&gt;
-            &lt;li class="nav-item dropdown active"&gt;
-                &lt;a class="nav-link dropdown-toggle fontwhite" href="#" id="navbarDropdown" role="button"
-                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"&gt;Home&lt;/a&gt;
-                &lt;div class="dropdown-menu " aria-labelledby="navbarDropdown"&gt;
-                    &lt;a class="dropdown-item" href="index.html"&gt;Back to index&lt;/a&gt;
-                &lt;/div&gt;				   
-            &lt;/li&gt;
-            &lt;li class="nav-item dropdown"&gt;
-                &lt;a class="nav-link dropdown-toggle fontwhite" href="#" id="navbarDropdown" role="button"
-                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"&gt;About Us&lt;/a&gt;
-                &lt;div class="dropdown-menu " aria-labelledby="navbarDropdown"&gt;
-                    &lt;a class="dropdown-item" href="introduction.html"&gt;Introduction&lt;/a&gt;
-                    &lt;a class="dropdown-item" href="administration.html"&gt;Administration&lt;/a&gt;
-                &lt;/div&gt;
-            &lt;/li&gt;
-			&lt;li class="nav-item dropdown active"&gt;
-                &lt;a class="nav-link dropdown-toggle fontwhite" href="#" id="navbarDropdown" role="button"
-                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"&gt;Admission&lt;/a&gt;
-                &lt;div class="dropdown-menu " aria-labelledby="navbarDropdown"&gt;
-                    &lt;a class="dropdown-item"
-                       href="admissions_requirements.html"&gt;Admissions requirements and process&lt;/a&gt;
-                    &lt;a class="dropdown-item"
-                       href="admissions_dates.html"&gt;Admissions dates and deadlines&lt;/a&gt;
-                    &lt;a class="dropdown-item" href="financial.html"&gt;Tuition, Financial Aid, and Others&lt;/a&gt;
-                &lt;/div&gt;
-            &lt;/li&gt;
-            &lt;li class="nav-item dropdown"&gt;
-                &lt;a class="nav-link dropdown-toggle fontwhite" href="#" id="navbarDropdown" role="button"
-                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"&gt;Academics&lt;/a&gt;
-                &lt;div class="dropdown-menu " aria-labelledby="navbarDropdown"&gt;
-                    &lt;a class="dropdown-item" href="academic_system.html"&gt;Academic System&lt;/a&gt;
-                    &lt;a class="dropdown-item"
-                       href="curriculum.html"&gt;Curriculum&lt;/a&gt;
-                    &lt;a class="dropdown-item"
-                       href="regulations.html"&gt;Regulations&lt;/a&gt;
-                    &lt;a class="dropdown-item"
-                       href="graduation.html"&gt;Graduation Requirement&lt;/a&gt;
-                    &lt;a class="dropdown-item" href="defense.html"&gt;Doctoral Oral Defense Application&lt;/a&gt;
-                &lt;/div&gt;
-            &lt;/li&gt;
-
-            &lt;li class="nav-item dropdown"&gt;
-                &lt;a class="nav-link dropdown-toggle fontwhite" href="#" id="navbarDropdown" role="button"
-                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"&gt;Resources &amp; Forms&lt;/a&gt;
-                &lt;div class="dropdown-menu " aria-labelledby="navbarDropdown"&gt;
-                    &lt;a class="dropdown-item" href="resources.html"&gt;Resources &amp; Forms&lt;/a&gt;
-                &lt;/div&gt;				   
-            &lt;/li&gt;
-
-            &lt;li class="nav-item dropdown"&gt;
-                &lt;a class="nav-link dropdown-toggle fontwhite" href="#" id="navbarDropdown" role="button"
-                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"&gt;Faculty&lt;/a&gt;
-                &lt;div class="dropdown-menu " aria-labelledby="navbarDropdown"&gt;
-                    &lt;a class="dropdown-item" href="faculty.html"&gt;List of Faculty&lt;/a&gt;
-                    &lt;a class="dropdown-item" href="policy.html"&gt;Faculty Policy&lt;/a&gt;
-                &lt;/div&gt;
-            &lt;/li&gt;
-            &lt;li class="nav-item dropdown"&gt;
-                &lt;a class="nav-link dropdown-toggle fontwhite" href="#" id="navbarDropdown" role="button"
-                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"&gt;Course&lt;/a&gt;
-                &lt;div class="dropdown-menu " aria-labelledby="navbarDropdown"&gt;
-                    &lt;a class="dropdown-item" href="course.html"&gt;Course&lt;/a&gt;
-                &lt;/div&gt;				   				   
-            &lt;/li&gt;
-            &lt;li class="nav-item dropdown"&gt;
-                &lt;a class="nav-link dropdown-toggle fontwhite" href="#" id="navbarDropdown" role="button"
-                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"&gt;Contact&lt;/a&gt;
-                &lt;div class="dropdown-menu " aria-labelledby="navbarDropdown"&gt;
-                    &lt;a class="dropdown-item" href="contact.html"&gt;Contact&lt;/a&gt;
-                &lt;/div&gt;				   
-            &lt;/li&gt;
-        &lt;/ul&gt;
-    &lt;/div&gt;
-&lt;/nav&gt;
-&lt;div id="toptop"&gt;&lt;/div&gt;
-&lt;div id="carouselExampleIndicators" class="carousel slide mtp" data-ride="carousel"&gt;
-    &lt;ol class="carousel-indicators"&gt;
-        &lt;li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"&gt;&lt;/li&gt;
-        &lt;li data-target="#carouselExampleIndicators" data-slide-to="1"&gt;&lt;/li&gt;
-        &lt;li data-target="#carouselExampleIndicators" data-slide-to="2"&gt;&lt;/li&gt;
-    &lt;/ol&gt;
-    &lt;div class="carousel-inner"&gt;
-        &lt;div class="carousel-item active"&gt;
-            &lt;img src="./img/no1.jpg" class="d-block w-100" alt="..."&gt;
-        &lt;/div&gt;
-        &lt;div class="carousel-item"&gt;
-            &lt;img src="img/new.jpg" class="d-block w-100" alt="..."&gt;
-        &lt;/div&gt;
-        &lt;div class="carousel-item"&gt;
-            &lt;img src="img/no4.jpg" class="d-block w-100" alt="..."&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev"&gt;
-        &lt;span class="carousel-control-prev-icon" aria-hidden="true"&gt;&lt;/span&gt;
-        &lt;span class="sr-only"&gt;Previous&lt;/span&gt;
-    &lt;/a&gt;
-    &lt;a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next"&gt;
-        &lt;span class="carousel-control-next-icon" aria-hidden="true"&gt;&lt;/span&gt;
-        &lt;span class="sr-only"&gt;Next&lt;/span&gt;
-    &lt;/a&gt;
-&lt;/div&gt;
-
-&lt;div class="collapsible"&gt;
-    &lt;!--CENTER&gt;
-        &lt;button type="button" class="btn btn-primary" id="news"&gt;News&lt;/button&gt;
-        &lt;button type="button" class="btn btn-secondary" id="fellowship"&gt;Fellowship&lt;/button&gt;
-        &lt;button type="button" class="btn btn-success" id="honor_awards"&gt;Honor and Awards&lt;/button&gt;
-        &lt;button type="button" class="btn btn-info" id="references"&gt;References&lt;/button&gt;
-    &lt;/CENTER--&gt;
-&lt;/div&gt;
-&lt;div class="accordion" id="accordion_news"&gt;
-	&lt;div class="card_container"&gt;
-		&lt;table class="rightcontent" align="center" border="0" cellspacing="1"&gt;
-		&lt;tbody&gt;
-			&lt;tr&gt;
-				&lt;td class='orange_FFb_14'&gt;Faculty&lt;/td&gt;
-				&lt;td align='right'&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan="2"&gt;
-					&lt;select onchange="window.location=this.value"&gt;
-						&lt;option value="#anchor_ac" selected &gt;Core Faculty â Advisory Committee è«®è©¢å§å¡æ&lt;/option&gt;
-						&lt;option value="#anchor_mps"&gt;Core Faculty â Division of Mathematics and Physical Sciences, Academia Sinica ä¸­å¤®ç ç©¶é¢æ¸çç§å­¸çµ&lt;/option&gt;
-						&lt;option value="#anchor_ls"&gt;Core Faculty â Division of Life Sciences, Academia Sinica ä¸­å¤®ç ç©¶é¢çå½ç§å­¸çµ&lt;/option&gt;
-						&lt;option value="#anchor_cu"&gt;Core Faculty â Collaborative Universities åä½å¤§å­¸&lt;/option&gt;
-					&lt;/select&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td&gt;
-					&lt;div id="anchor_ac"&gt;&lt;/div&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan="3" class="red_9933b"&gt;Core Faculty - Advisory Committee &lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan="3"&gt;&lt;p align="right"&gt;&lt;strong&gt;Eligible to take student(s)&lt;/strong&gt;: &lt;img src='images/eligible_to_take_student(s).png' width='40' height='35'/&gt;&lt;/p&gt;&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='3'&gt;&lt;strong&gt;Institute of Biological Chemistry ä¸­å¤®ç ç©¶é¢ çç©åå­¸ç ç©¶æ&lt;/strong&gt;&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td rowspan='5' style='width: 158px;'&gt;
-					&lt;p align='center'&gt;
-					&lt;img src='images/é¢é·_å»ä¿æº.jpg'  width='135px' height='162px'/&gt;&lt;/p&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='2' height='29' width='473'&gt;
-					&lt;span class='gray14_33b'&gt;
-						&lt;span style='font-weight: 400;'&gt;
-							&lt;strong&gt;Dr. James C. Liao&lt;/strong&gt;
-						&lt;/span&gt;
-						&lt;strong&gt;
-							&lt;a href='https://www.ibc.sinica.edu.tw/Faculty/ViewPI?DatetimeStr=20210916150157' target='_blank'&gt;å»ä¿æºé¢é·&lt;/a&gt;
-							&lt;a href='https://www.ibc.sinica.edu.tw/Faculty/ViewPI?DatetimeStr=20210916150157' target='_blank'&gt;
-							&lt;img src='images/maximize.png' width='20' height='15'/&gt;
-							&lt;/a&gt;
-						&lt;/strong&gt;
-					&lt;/span&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='2' height='29' width='473'&gt;
-					&lt;span class='gray14_33b'&gt;
-						&lt;strong&gt;
-						liaoj@gate.sinica.edu.tw
-						&lt;button class='btn å»ä¿æºé¢é·'&gt;
-						&lt;img src='images/email.png' width='20' height='15'liaoj@gate.sinica.edu.tw (Copy Email)&gt;
-						&lt;/button&gt;
-						&lt;/strong&gt;
-					&lt;/span&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td class='gray14_33b' colspan='2'&gt;
-				&lt;span class='gray14_33b'&gt;Students: &lt;img src='images/eligible_to_take_student(s).png' width='40' height='35'/&gt;&lt;/span&gt;&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='2'&gt;Professor Liao is a world leader in metabolic and synthetic biology, particularly in the area of microbial synthesis of fuels and chemicals, and in the redesign of primary metabolic network. He also developed Network Component Analysis (NCA) and Ensemble Modeling for analyzing transcription regulatory networks, and designed synthetic (artificial) gene-metabolic regulatory circuits, which set the foundation for metabolic synthetic biology.
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='3'&gt;&amp;nbsp;&lt;/td&gt;
-			&lt;/tr&gt;
-
-			&lt;tr&gt;
-				&lt;td colspan='3'&gt;&lt;strong&gt;Biodiversity Research Center ä¸­å¤®ç ç©¶é¢ çç©å¤æ¨£æ§ç ç©¶ä¸­å¿&lt;/strong&gt;&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td rowspan='5' style='width: 158px;'&gt;
-				&lt;p align='center'&gt;
-				&lt;img src='images/çå¤ä¸­å¿_ææé.jpg' height='162' width='135' /&gt;&lt;/p&gt;&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='2' height='29' width='473'&gt;
-					&lt;span class='gray14_33b'&gt;
-					&lt;span style='font-weight: 400;'&gt;
-						&lt;strong&gt;Dr. Wen-Hsiung Li&lt;/strong&gt;
-					&lt;/span&gt;
-					&lt;strong&gt;
-						&lt;a href='https://academicians.sinica.edu.tw/index.php?r=academician-n%2Fshow&amp;id=119' target='_blank'&gt;ææé&lt;/a&gt;
-						&lt;a href='https://academicians.sinica.edu.tw/index.php?r=academician-n%2Fshow&amp;id=119' target='_blank'&gt;
-						&lt;img src='images/maximize.png' width='20' height='15'/&gt;
-						&lt;/a&gt;
-					&lt;/strong&gt;
-					&lt;/span&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='2' height='29' width='473'&gt;
-					&lt;span class='gray14_33b'&gt;
-					&lt;strong&gt;
-					whli@sinica.edu.tw
-					&lt;button class='btn ææé'&gt;
-						&lt;img src='images/email.png' width='20' height='15'whli@sinica.edu.tw (Copy Email)/&gt;
-					&lt;/button&gt;
-					&lt;/strong&gt;
-					&lt;/span&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td class='gray14_33b' colspan='2'&gt;
-				&lt;span class='gray14_33b'&gt;Students: &lt;img src='images/eligible_to_take_student(s).png' width='40' height='35'/&gt;&lt;/span&gt;&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='2' height='106'&gt;â  Evolutionary genomics
-					&lt;br&gt;â  Molecular evolution
-					&lt;br&gt;â  Bioinformatics and computational biology
-					&lt;br&gt;â  Population genetics, human genetics
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='3'&gt;&amp;nbsp;&lt;/td&gt;
-			&lt;/tr&gt;			
-			&lt;tr&gt;
-				&lt;td&gt;
-					&lt;div id='anchor_mps'&gt;&lt;/div&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='3' class='red_9933b'&gt;Core Faculty â Division of Mathematics and Physical Sciences, Academia Sinica ä¸­å¤®ç ç©¶é¢æ¸çç§å­¸çµ
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='3'&gt;&amp;nbsp;&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='3'&gt;&lt;strong&gt;Institute of Information Science ä¸­å¤®ç ç©¶é¢è³è¨ç§å­¸ç ç©¶æ&lt;/strong&gt;&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td rowspan='5' style='width: 158px;'&gt;
-					&lt;p align='center'&gt;
-					&lt;img src='images/è³è¨æ_è¡æ·å¯¬.jpg' height='162' width='135' /&gt;
-					&lt;/p&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='2' height='29' width='473'&gt;
-					&lt;span class='gray14_33b'&gt;
-						&lt;span style='font-weight: 400;'&gt;
-							&lt;strong&gt;Dr. Huai-Kuang Tsai&lt;/strong&gt;
-						&lt;/span&gt;
-						&lt;strong&gt;
-							&lt;a href='https://homepage.iis.sinica.edu.tw/pages/hktsai/contact_zh.html' target='_blank'&gt;è¡æ·å¯¬&lt;/a&gt;
-							&lt;a href='https://homepage.iis.sinica.edu.tw/pages/hktsai/contact_zh.html' target='_blank'&gt;
-							&lt;img src='images/maximize.png' width='20' height='15'/&gt;
-							&lt;/a&gt;
-						&lt;/strong&gt;
-					&lt;/span&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='2' height='29' width='473'&gt;
-					&lt;span class='gray14_33b'&gt;
-						&lt;strong&gt;
-							hktsai@iis.sinica.edu.tw
-							&lt;button class='btn è¡æ·å¯¬'&gt;
-								&lt;img src='images/email.png' width='20' height='15'hktsai@iis.sinica.edu.tw (Copy Email)/&gt;
-							&lt;/button&gt;
-						&lt;/strong&gt;
-					&lt;/span&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td class='gray14_33b' colspan='2'&gt;
-					&lt;span class='gray14_33b'&gt;Students: Shang-Kok Ng, Ru-Yin Jian &lt;img src='images/eligible_to_take_student(s).png' width='40' height='35'/&gt;&lt;/span&gt;&lt;/td&gt;
-			&lt;/tr&gt;
-
-			&lt;tr&gt;
-				&lt;td colspan='2' height='106'&gt;â  Evolutionary algorithm
-				&lt;br&gt;â  Bioinformatics
-				&lt;br&gt;â  Regulatory mechanism
-				&lt;br&gt;â  Metagenomics
-				&lt;/td&gt;
-			&lt;/tr&gt;
-
-			&lt;tr&gt;
-				&lt;td colspan='3'&gt;&amp;nbsp;&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='3'&gt;&lt;strong&gt;Institute of Statistical Science ä¸­å¤®ç ç©¶é¢ çµ±è¨ç§å­¸ç ç©¶æ&lt;/strong&gt;&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td rowspan='5' style='width: 158px;'&gt;
-					&lt;p align='center'&gt;
-						&lt;img src='images/çµ±è¨æ_è¬åè.jpg' height='162' width='135'/&gt;
-					&lt;/p&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='2' height='29' width='473'&gt;
-					&lt;span class='gray14_33b'&gt;
-						&lt;span style='font-weight: 400;'&gt;
-							&lt;strong&gt;Dr. Grace S. Shieh&lt;/strong&gt;
-						&lt;/span&gt;
-						&lt;strong&gt;
-							&lt;a href='https://www.stat.sinica.edu.tw/cht/index.php?act=researcher_manager&amp;code=view&amp;member=21' target='_blank'&gt;è¬åè&lt;/a&gt;
-							&lt;a href='https://www.stat.sinica.edu.tw/cht/index.php?act=researcher_manager&amp;code=view&amp;member=21' target='_blank'&gt;
-							&lt;img src='images/maximize.png' width='20' height='15'/&gt;
-							&lt;/a&gt;
-						&lt;/strong&gt;
-					&lt;/span&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='2' height='29' width='473'&gt;
-					&lt;span class='gray14_33b'&gt;
-						&lt;strong&gt;
-							gshieh@stat.sinica.edu.tw
-							&lt;button class='btn è¬åè'&gt;
-							&lt;img src='images/email.png' width='20' height='15'gshieh@stat.sinica.edu.tw (Copy Email)/&gt;
-							&lt;/button&gt;
-						&lt;/strong&gt;
-					&lt;/span&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td class='gray14_33b' colspan='2'&gt;
-					&lt;span class='gray14_33b'&gt;Students: &lt;img src='images/eligible_to_take_student(s).png' width='40' height='35'/&gt;&lt;/span&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='2' height='106'&gt;â  Precision Medicine: Prediction for drug response of cancer patients
-					&lt;br&gt;â  Identify gene signature of immunotherapy (PD-L1 inhibitor, etc)
-					&lt;br&gt;â  Integrative Analysis of multi-omics data
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='3'&gt;&amp;nbsp;&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='3'&gt;&lt;strong&gt;Institute of Statistical Science ä¸­å¤®ç ç©¶é¢ çµ±è¨ç§å­¸ç ç©¶æ&lt;/strong&gt;&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td rowspan='5' style='width: 158px;'&gt;
-					&lt;p align='center'&gt;
-						&lt;img src='images/çµ±è¨æ_æ¥æ¬£æ´².png' height='162' width='135' /&gt;
-					&lt;/p&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='2' height='29' width='473'&gt;
-					&lt;span class='gray14_33b'&gt;
-						&lt;span style='font-weight: 400;'&gt;
-							&lt;strong&gt;Dr. Hsin-Chou Yang&lt;/strong&gt;
-						&lt;/span&gt;
-						&lt;strong&gt;
-							&lt;a href='https://www.stat.sinica.edu.tw/cht/index.php?act=researcher_manager&amp;code=view&amp;member=28' target='_blank'&gt;æ¥æ¬£æ´²&lt;/a&gt;
-							&lt;a href='https://www.stat.sinica.edu.tw/cht/index.php?act=researcher_manager&amp;code=view&amp;member=28' target='_blank'&gt;
-							&lt;img src='images/maximize.png' width='20' height='15'/&gt;
-							&lt;/a&gt;
-						&lt;/strong&gt;
-					&lt;/span&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='2' height='29' width='473'&gt;
-					&lt;span class='gray14_33b'&gt;
-						&lt;strong&gt;
-							hsinchou@stat.sinica.edu.tw
-							&lt;button class='btn æ¥æ¬£æ´²'&gt;
-							&lt;img src='images/email.png' width='20' height='15'hsinchou@stat.sinica.edu.tw (Copy Email)/&gt;
-							&lt;/button&gt;
-						&lt;/strong&gt;
-					&lt;/span&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td class='gray14_33b' colspan='2'&gt;
-					&lt;span class='gray14_33b'&gt;Students: Cai-Sian Liao, Apriandy Angdresey&lt;img src='images/eligible_to_take_student(s).png' width='40' height='35'/&gt;&lt;/span&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='2' height='106'&gt;â  Statistical genetics/genomics
-					&lt;br&gt;â  Disease gene mapping
-					&lt;br&gt;â  Population genomics
-					&lt;br&gt;â  Omics data analysis
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='3'&gt;&amp;nbsp;&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='3'&gt;&lt;strong&gt;Institute of Statistical Science ä¸­å¤®ç ç©¶é¢ çµ±è¨ç§å­¸ç ç©¶æ&lt;/strong&gt;&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td rowspan='5' style='width: 158px;'&gt;
-					&lt;p align='center'&gt;
-						&lt;img src='images/çµ±è¨æ_è¢æ°ç.jpg' height='162' width='135' /&gt;
-					&lt;/p&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='2' height='29' width='473'&gt;
-					&lt;span class='gray14_33b'&gt;
-						&lt;span style='font-weight: 400;'&gt;
-							&lt;strong&gt;Dr. Shin-Sheng Yuan&lt;/strong&gt;
-						&lt;/span&gt;
-						&lt;strong&gt;
-							&lt;a href='https://www.stat.sinica.edu.tw/cht/index.php?act=researcher_manager&amp;code=view&amp;member=33' target='_blank'&gt;è¢æ°ç&lt;/a&gt;
-							&lt;a href='https://www.stat.sinica.edu.tw/cht/index.php?act=researcher_manager&amp;code=view&amp;member=33' target='_blank'&gt;
-							&lt;img src='images/maximize.png' width='20' height='15'/&gt;
-							&lt;/a&gt;
-						&lt;/strong&gt;
-					&lt;/span&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='2' height='29' width='473'&gt;
-					&lt;span class='gray14_33b'&gt;
-						&lt;strong&gt;
-							syuan@stat.sinica.edu.tw
-							&lt;button class='btn è¢æ°ç'&gt;
-							&lt;img src='images/email.png' width='20' height='15'syuan@stat.sinica.edu.tw (Copy Email)/&gt;
-							&lt;/button&gt;
-						&lt;/strong&gt;
-					&lt;/span&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td class='gray14_33b' colspan='2'&gt;
-				&lt;span class='gray14_33b'&gt;Students: &lt;img src='images/eligible_to_take_student(s).png' width='40' height='35'/&gt;&lt;/span&gt;&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='2' height='106'&gt;â  Microarray data analysis
-					&lt;br&gt;â  Drug response mechanism
-					&lt;br&gt;â  Medical imaging data analysis
-					&lt;br&gt;â  Manipulating mass spectra database
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='3'&gt;&amp;nbsp;&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='3'&gt;&lt;strong&gt;Institute of Statistical Science ä¸­å¤®ç ç©¶é¢ çµ±è¨ç§å­¸ç ç©¶æ&lt;/strong&gt;&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td rowspan='5' style='width: 158px;'&gt;
-					&lt;p align='center'&gt;
-						&lt;img src='images/çµ±è¨æ_åç¶­ä¸­.jpg' height='162' width='135' /&gt;
-					&lt;/p&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='2' height='29' width='473'&gt;
-					&lt;span class='gray14_33b'&gt;
-						&lt;span style='font-weight: 400;'&gt;
-							&lt;strong&gt;Dr. Wei-chung Liu&lt;/strong&gt;
-						&lt;/span&gt;
-						&lt;strong&gt;
-							&lt;a href='https://www.stat.sinica.edu.tw/cht/index.php?act=researcher_manager&amp;code=view&amp;member=20' target='_blank'&gt;åç¶­ä¸­&lt;/a&gt;
-							&lt;a href='https://www.stat.sinica.edu.tw/cht/index.php?act=researcher_manager&amp;code=view&amp;member=20' target='_blank'&gt;
-							&lt;img src='images/maximize.png' width='20' height='15'/&gt;
-							&lt;/a&gt;
-						&lt;/strong&gt;
-					&lt;/span&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='2' height='29' width='473'&gt;
-					&lt;span class='gray14_33b'&gt;
-						&lt;strong&gt;
-							wliu1975@stat.sinica.edu.tw
-							&lt;button class='btn åç¶­ä¸­'&gt;
-							&lt;img src='images/email.png' width='20' height='15'wliu1975@stat.sinica.edu.tw (Copy Email)/&gt;
-							&lt;/button&gt;
-						&lt;/strong&gt;
-					&lt;/span&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td class='gray14_33b' colspan='2'&gt;
-				&lt;span class='gray14_33b'&gt;Students: &lt;img src='images/eligible_to_take_student(s).png' width='40' height='35'/&gt;&lt;/span&gt;&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='2' height='106'&gt;â  Mathematical biology
-					&lt;br&gt;â  Theoretical ecology
-					&lt;br&gt;â  Quantitative epidemiology
-					&lt;br&gt;â  Network biology
-					&lt;br&gt;â  Sociology
-					&lt;br&gt;â  Systems biology
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='3'&gt;&amp;nbsp;&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='3'&gt;&lt;strong&gt;Institute of Statistical Science ä¸­å¤®ç ç©¶é¢ çµ±è¨ç§å­¸ç ç©¶æ&lt;/strong&gt;&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td rowspan='5' style='width: 158px;'&gt;
-					&lt;p align='center'&gt;
-					&lt;img src='images/çµ±è¨æ_æ¥æ¯ç¿.jpg' height='162' width='135' /&gt;
-					&lt;/p&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='2' height='29' width='473'&gt;
-					&lt;span class='gray14_33b'&gt;
-						&lt;span style='font-weight: 400;'&gt;
-							&lt;strong&gt;Dr. Chen-Hsiang Yeang&lt;/strong&gt;
-						&lt;/span&gt;
-						&lt;strong&gt;
-							&lt;a href='https://www.stat.sinica.edu.tw/cht/index.php?act=researcher_manager&amp;code=view&amp;member=31' target='_blank'&gt;æ¥æ¯ç¿&lt;/a&gt;
-							&lt;a href='https://www.stat.sinica.edu.tw/cht/index.php?act=researcher_manager&amp;code=view&amp;member=31' target='_blank'&gt;
-							&lt;img src='images/maximize.png' width='20' height='15'/&gt;
-							&lt;/a&gt;
-						&lt;/strong&gt;
-					&lt;/span&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='2' height='29' width='473'&gt;
-					&lt;span class='gray14_33b'&gt;
-						&lt;strong&gt;
-						chyeang@stat.sinica.edu.tw
-						&lt;button class='btn æ¥æ¯ç¿'&gt;
-						&lt;img src='images/email.png' width='20' height='15'chyeang@stat.sinica.edu.tw (Copy Email)/&gt;
-						&lt;/button&gt;
-						&lt;/strong&gt;
-					&lt;/span&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td class='gray14_33b' colspan='2'&gt;
-					&lt;span class='gray14_33b'&gt;Students: &lt;img src='images/eligible_to_take_student(s).png' width='40' height='35'/&gt;&lt;/span&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-
-			&lt;tr&gt;
-				&lt;td colspan='2' height='106'&gt;â  Cancer genomics
-				&lt;br&gt;â  Molecular evolution
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='3'&gt;&amp;nbsp;&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='3'&gt;&lt;strong&gt;Institute of Statistical Science ä¸­å¤®ç ç©¶é¢ çµ±è¨ç§å­¸ç ç©¶æ&lt;/strong&gt;&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td rowspan='5' style='width: 158px;'&gt;
-				&lt;p align='center'&gt;
-				&lt;img src='images/çµ±è¨æ_é³ç¿å®.JPG' height='162' width='135' /&gt;&lt;/p&gt;&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='2' height='29' width='473'&gt;
-					&lt;span class='gray14_33b'&gt;
-						&lt;span style='font-weight: 400;'&gt;
-							&lt;strong&gt;Dr. Hsuan-Yu Chen&lt;/strong&gt;
-						&lt;/span&gt;
-						&lt;strong&gt;
-							&lt;a href='https://www.stat.sinica.edu.tw/cht/index.php?act=researcher_manager&amp;code=view&amp;member=6' target='_blank'&gt;é³ç¿å®&lt;/a&gt;
-							&lt;a href='https://www.stat.sinica.edu.tw/cht/index.php?act=researcher_manager&amp;code=view&amp;member=6' target='_blank'&gt;
-							&lt;img src='images/maximize.png' width='20' height='15'/&gt;
-							&lt;/a&gt;
-						&lt;/strong&gt;
-					&lt;/span&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='2' height='29' width='473'&gt;
-					&lt;span class='gray14_33b'&gt;
-						&lt;strong&gt;
-							hychen@stat.sinica.edu.tw
-							&lt;button class='btn é³ç¿å®'&gt;
-							&lt;img src='images/email.png' width='20' height='15'hychen@stat.sinica.edu.tw (Copy Email)/&gt;
-							&lt;/button&gt;
-						&lt;/strong&gt;
-					&lt;/span&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td class='gray14_33b' colspan='2'&gt;
-					&lt;span class='gray14_33b'&gt;Students: Rodrigo Espinoza Silva &lt;img src='images/eligible_to_take_student(s).png' width='40' height='35'/&gt;&lt;/span&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='2' height='106'&gt;â  Bioinformatics
-					&lt;br&gt;â  Epidemiology and biostatistic
-					&lt;br&gt;â  Integrative cancer biology
-					&lt;br&gt;â  Personalized medicine
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='3'&gt;&amp;nbsp;&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='3'&gt;&lt;strong&gt;Institute of Statistical Science ä¸­å¤®ç ç©¶é¢ çµ±è¨ç§å­¸ç ç©¶æ&lt;/strong&gt;&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td rowspan='5' style='width: 158px;'&gt;
-					&lt;p align='center'&gt;
-						&lt;img src='images/çµ±è¨æ_é»å½¥æ£(new).jpg' height='162' width='135' /&gt;
-					&lt;/p&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='2' height='29' width='473'&gt;
-					&lt;span class='gray14_33b'&gt;
-						&lt;span style='font-weight: 400;'&gt;
-							&lt;strong&gt;Dr. Yen-Tsung Huang&lt;/strong&gt;
-						&lt;/span&gt;
-						&lt;strong&gt;
-							&lt;a href='https://www.stat.sinica.edu.tw/cht/index.php?act=researcher_manager&amp;code=view&amp;member=13' target='_blank'&gt;é»å½¥æ£&lt;/a&gt;
-							&lt;a href='https://www.stat.sinica.edu.tw/cht/index.php?act=researcher_manager&amp;code=view&amp;member=13' target='_blank'&gt;
-							&lt;img src='images/maximize.png' width='20' height='15'/&gt;
-							&lt;/a&gt;
-						&lt;/strong&gt;
-					&lt;/span&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='2' height='29' width='473'&gt;
-					&lt;span class='gray14_33b'&gt;
-						&lt;strong&gt;
-							ythuang@stat.sinica.edu.tw
-							&lt;button class='btn é»å½¥æ£'&gt;
-							&lt;img src='images/email.png' width='20' height='15'ythuang@stat.sinica.edu.tw (Copy Email)/&gt;
-							&lt;/button&gt;
-						&lt;/strong&gt;
-					&lt;/span&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td class='gray14_33b' colspan='2'&gt;
-					&lt;span class='gray14_33b'&gt;Students: &lt;img src='images/eligible_to_take_student(s).png' width='40' height='35'/&gt;&lt;/span&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='2' height='106'&gt;â  Biostatistics
-					&lt;br&gt;â  Statistical Genetics
-					&lt;br&gt;â  Integrative Genomics
-					&lt;br&gt;â  Causal Mediation model
-					&lt;br&gt;â  Survival Analysis
-					&lt;br&gt;â  Epidemiology
-					&lt;br&gt;â  Causal Inference
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='3'&gt;&amp;nbsp;&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='3'&gt;&lt;strong&gt;Institute of Statistical Science ä¸­å¤®ç ç©¶é¢ çµ±è¨ç§å­¸ç ç©¶æ&lt;/strong&gt;&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td rowspan='5' style='width: 158px;'&gt;
-					&lt;p align='center'&gt;
-						&lt;img src='images/çµ±è¨æ_é¡ä½æ¦.jpg' height='162' width='135' /&gt;
-					&lt;/p&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='2' height='29' width='473'&gt;
-					&lt;span class='gray14_33b'&gt;
-						&lt;span style='font-weight: 400;'&gt;
-							&lt;strong&gt;Dr. Tso-Jung Yen&lt;/strong&gt;
-						&lt;/span&gt;
-						&lt;strong&gt;
-							&lt;a href='https://www.stat.sinica.edu.tw/eng/index.php?act=researcher_manager&amp;code=view&amp;member=32' target='_blank'&gt;é¡ä½æ¦&lt;/a&gt;
-							&lt;a href='https://www.stat.sinica.edu.tw/eng/index.php?act=researcher_manager&amp;code=view&amp;member=32' target='_blank'&gt;
-							&lt;img src='images/maximize.png' width='20' height='15'/&gt;
-							&lt;/a&gt;
-						&lt;/strong&gt;
-					&lt;/span&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='2' height='29' width='473'&gt;
-					&lt;span class='gray14_33b'&gt;
-						&lt;strong&gt;
-							tjyen@stat.sinica.edu.tw
-							&lt;button class='btn é¡ä½æ¦'&gt;
-							&lt;img src='images/email.png' width='20' height='15'tjyen@stat.sinica.edu.tw (Copy Email)/&gt;
-							&lt;/button&gt;
-						&lt;/strong&gt;
-					&lt;/span&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td class='gray14_33b' colspan='2'&gt;
-					&lt;span class='gray14_33b'&gt;Students: &lt;/span&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='2' height='106'&gt;â  Algorithms for solving large scale statistical problems
-					&lt;br&gt;â  Estimation of high dimension models
-					&lt;br&gt;â  Analysis of social network data
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='3'&gt;&amp;nbsp;&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='3'&gt;&lt;strong&gt;Research Center for Applied Sciences ä¸­å¤®ç ç©¶é¢ æç¨ç§å­¸ç ç©¶ä¸­å¿&lt;/strong&gt;&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td rowspan='5' style='width: 158px;'&gt;
-					&lt;p align='center'&gt;
-					&lt;img src='images/çé«æ_ææ¦®ä¿¡.jpg' height='162' width='135' /&gt;
-					&lt;/p&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='2' height='29' width='473'&gt;
-					&lt;span class='gray14_33b'&gt;
-					&lt;span style='font-weight: 400;'&gt;
-						&lt;strong&gt;Dr. Jung-Hsin Lin&lt;/strong&gt;
-					&lt;/span&gt;
-					&lt;strong&gt;
-						&lt;a href='https://www.ibms.sinica.edu.tw/jung-hsin-lin/' target='_blank'&gt;ææ¦®ä¿¡&lt;/a&gt;
-						&lt;a href='https://www.ibms.sinica.edu.tw/jung-hsin-lin/' target='_blank'&gt;
-						&lt;img src='images/maximize.png' width='20' height='15'/&gt;
-						&lt;/a&gt;
-					&lt;/strong&gt;
-					&lt;/span&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='2' height='29' width='473'&gt;
-					&lt;span class='gray14_33b'&gt;
-						&lt;strong&gt;
-							jhlin@gate.sinica.edu.tw
-							&lt;button class='btn ææ¦®ä¿¡'&gt;
-							&lt;img src='images/email.png' width='20' height='15'jhlin@gate.sinica.edu.tw (Copy Email)/&gt;
-							&lt;/button&gt;
-						&lt;/strong&gt;
-					&lt;/span&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td class='gray14_33b' colspan='2'&gt;
-				&lt;span class='gray14_33b'&gt;Students: &lt;img src='images/eligible_to_take_student(s).png' width='40' height='35'/&gt;&lt;/span&gt;&lt;/td&gt;
-			&lt;/tr&gt;
-
-			&lt;tr&gt;
-				&lt;td colspan='2' height='106'&gt;â  Pharmacoinformatics
-					&lt;br&gt;â  Computational biophysics
-					&lt;br&gt;â  Bioinformatics
-					&lt;br&gt;â  Structural biology
-					&lt;br&gt;â  Molecular simulations
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='3'&gt;&amp;nbsp;&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='3'&gt;&lt;strong&gt;Institute of Chemistry ä¸­å¤®ç ç©¶é¢ åå­¸ç ç©¶æ&lt;/strong&gt;&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td rowspan='5' style='width: 158px;'&gt;
-					&lt;p align='center'&gt;
-					&lt;img src='images/åå­¸æ_è¨±æ­è(new).jpg' height='162' width='135' /&gt;
-					&lt;/p&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='2' height='29' width='473'&gt;
-					&lt;span class='gray14_33b'&gt;
-					&lt;span style='font-weight: 400;'&gt;
-						&lt;strong&gt;Dr. Chao-Ping Hsu&lt;/strong&gt;
-					&lt;/span&gt;
-					&lt;strong&gt;
-						&lt;a href='https://www.chem.sinica.edu.tw/faculty/index.php?piName=cherri&amp;lang=ch' target='_blank'&gt;è¨±æ­è&lt;/a&gt;
-						&lt;a href='https://www.chem.sinica.edu.tw/faculty/index.php?piName=cherri&amp;lang=ch' target='_blank'&gt;
-						&lt;img src='images/maximize.png' width='20' height='15'/&gt;
-						&lt;/a&gt;
-					&lt;/strong&gt;
-					&lt;/span&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='2' height='29' width='473'&gt;
-					&lt;span class='gray14_33b'&gt;
-					&lt;strong&gt;
-						cherri@chem.sinica.edu.tw
-						&lt;button class='btn è¨±æ­è'&gt;
-						&lt;img src='images/email.png' width='20' height='15'cherri@chem.sinica.edu.tw (Copy Email)/&gt;
-						&lt;/button&gt;
-					&lt;/strong&gt;
-					&lt;/span&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td class='gray14_33b' colspan='2'&gt;
-					&lt;span class='gray14_33b'&gt;Students: &lt;img src='images/eligible_to_take_student(s).png' width='40' height='35'/&gt;&lt;/span&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-
-			&lt;tr&gt;
-				&lt;td colspan='2' height='106'&gt;â  Charge transport and energy transfer in advanced materials
-				&lt;br&gt;â  Dynamic description of biological systems
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='3'&gt;&amp;nbsp;&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='3'&gt;&lt;strong&gt;Research Center for Information Technology Innovationä¸­å¤®ç ç©¶é¢ è³è¨ç§æåµæ°ç ç©¶ä¸­å¿&lt;/strong&gt;&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td rowspan='5' style='width: 158px;'&gt;
-					&lt;p align='center'&gt;
-					&lt;img src='images/è³åµä¸­å¿_æ¹æ±.jpg' height='162' width='135' /&gt;
-					&lt;/p&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='2' height='29' width='473'&gt;
-					&lt;span class='gray14_33b'&gt;
-					&lt;span style='font-weight: 400;'&gt;
-						&lt;strong&gt;Dr. Yu Tsao&lt;/strong&gt;
-					&lt;/span&gt;
-					&lt;strong&gt;
-						&lt;a href='https://www.citi.sinica.edu.tw/pages/yu.tsao/index_zh.html' target='_blank'&gt;æ¹æ±&lt;/a&gt;
-						&lt;a href='https://www.citi.sinica.edu.tw/pages/yu.tsao/index_zh.html' target='_blank'&gt;
-						&lt;img src='images/maximize.png' width='20' height='15'/&gt;
-						&lt;/a&gt;
-					&lt;/strong&gt;
-					&lt;/span&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='2' height='29' width='473'&gt;
-					&lt;span class='gray14_33b'&gt;
-						&lt;strong&gt;
-							yu.tsao@citi.sinica.edu.tw
-							&lt;button class='btn æ¹æ±'&gt;
-							&lt;img src='images/email.png' width='20' height='15'yu.tsao@citi.sinica.edu.tw (Copy Email)/&gt;
-							&lt;/button&gt;
-						&lt;/strong&gt;
-					&lt;/span&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td class='gray14_33b' colspan='2'&gt;
-				&lt;span class='gray14_33b'&gt;Students: &lt;img src='images/eligible_to_take_student(s).png' width='40' height='35'/&gt;&lt;/span&gt;&lt;/td&gt;
-			&lt;/tr&gt;
-
-			&lt;tr&gt;
-				&lt;td colspan='2' height='106'&gt;â  Assisitve Speech Communication Technologies
-					&lt;br&gt;â  Audio-coding
-					&lt;br&gt;â  Deep Neural Networks
-					&lt;br&gt;â  Biomedical Signal Processing
-					&lt;br&gt;â  Speech Signal Processing
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='3'&gt;&amp;nbsp;&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td&gt;
-					&lt;div id='anchor_ls'&gt;&lt;/div&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='3' class='red_9933b'&gt;Core Faculty â Division of Life Sciences, Academia Sinica ä¸­å¤®ç ç©¶é¢çå½ç§å­¸çµ&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='3'&gt;&amp;nbsp;&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='3'&gt;&amp;nbsp;&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='3'&gt;&lt;strong&gt;Institute of Biomedical Sciences ä¸­å¤®ç ç©¶é¢ çç©é«å­¸ç§å­¸ç ç©¶æ&lt;/strong&gt;&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td rowspan='5' style='width: 158px;'&gt;
-					&lt;p align='center'&gt;
-					&lt;img src='images/çé«æ_é³å¼æ.jpg' height='162' width='135' /&gt;
-					&lt;/p&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='2' height='29' width='473'&gt;
-					&lt;span class='gray14_33b'&gt;
-					&lt;span style='font-weight: 400;'&gt;
-						&lt;strong&gt;Dr. Hung-Hsin Chen&lt;/strong&gt;
-					&lt;/span&gt;
-					&lt;strong&gt;
-						&lt;a href='https://www.ibms.sinica.edu.tw/hung-hsin-chen/en/' target='_blank'&gt;é³å¼æ&lt;/a&gt;
-						&lt;a href='https://www.ibms.sinica.edu.tw/hung-hsin-chen/en/' target='_blank'&gt;
-						&lt;img src='images/maximize.png' width='20' height='15'/&gt;
-						&lt;/a&gt;
-					&lt;/strong&gt;
-					&lt;/span&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='2' height='29' width='473'&gt;
-					&lt;span class='gray14_33b'&gt;
-					&lt;strong&gt;
-						hunghsinchen@ibms.sinica.edu.tw
-						&lt;button class='btn é³å¼æ'&gt;
-							&lt;img src='images/email.png' width='20' height='15'hunghsinchen@ibms.sinica.edu.tw  (Copy Email)/&gt;
-						&lt;/button&gt;
-					&lt;/strong&gt;
-					&lt;/span&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td class='gray14_33b' colspan='2'&gt;
-					&lt;span class='gray14_33b'&gt;Students: &lt;/span&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='2' height='106'&gt;â  Genetic Epidemiology
-					&lt;br&gt;â  Human Genomics
-					&lt;br&gt;â  Biobank analysis
-					&lt;br&gt;â  Transcriptomics
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='3'&gt;&amp;nbsp;&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='3'&gt;&lt;strong&gt;Biodiversity Research Center ä¸­å¤®ç ç©¶é¢ çç©å¤æ¨£æ§ç ç©¶ä¸­å¿&lt;/strong&gt;&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td rowspan='5' style='width: 158px;'&gt;
-				&lt;p align='center'&gt;
-				&lt;img src='images/çå¤ä¸­å¿_æ¹¯æ£®æ.jpg' height='162' width='135' /&gt;&lt;/p&gt;&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='2' height='29' width='473'&gt;
-				&lt;span class='gray14_33b'&gt;
-				&lt;span style='font-weight: 400;'&gt;
-				&lt;strong&gt;Dr. Sen-Lin Tang&lt;/strong&gt;
-				&lt;/span&gt;
-				&lt;strong&gt;
-				&lt;a href='https://www.biodiv.tw/pi-Sen-Lin_Tang' target='_blank'&gt;æ¹¯æ£®æ&lt;/a&gt;
-				&lt;a href='https://www.biodiv.tw/pi-Sen-Lin_Tang' target='_blank'&gt;
-				&lt;img src='images/maximize.png' width='20' height='15'/&gt;
-				&lt;/a&gt;
-				&lt;/strong&gt;
-				&lt;/span&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='2' height='29' width='473'&gt;
-					&lt;span class='gray14_33b'&gt;
-					&lt;strong&gt;
-						sltang@gate.sinica.edu.tw
-						&lt;button class='btn æ¹¯æ£®æ'&gt;
-						&lt;img src='images/email.png' width='20' height='15'sltang@gate.sinica.edu.tw (Copy Email)/&gt;
-						&lt;/button&gt;
-					&lt;/strong&gt;
-					&lt;/span&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td class='gray14_33b' colspan='2'&gt;
-					&lt;span class='gray14_33b'&gt;Students: &lt;img src='images/eligible_to_take_student(s).png' width='40' height='35'/&gt;&lt;/span&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-
-			&lt;tr&gt;
-				&lt;td colspan='2' height='106'&gt;â  Microbial Ecology and diversity
-					&lt;br&gt;â  Microbial genomics (Metagenomics0
-					&lt;br&gt;â  Computational biology
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='3'&gt;&amp;nbsp;&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='3'&gt;&lt;strong&gt;Biodiversity Research Center ä¸­å¤®ç ç©¶é¢ çç©å¤æ¨£æ§ç ç©¶ä¸­å¿&lt;/strong&gt;&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td rowspan='5' style='width: 158px;'&gt;
-				&lt;p align='center'&gt;
-				&lt;img src='images/çå¤ä¸­å¿_çå¿ ä¿¡(new).jpg' height='162' width='135' /&gt;&lt;/p&gt;&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='2' height='29' width='473'&gt;
-					&lt;span class='gray14_33b'&gt;
-						&lt;span style='font-weight: 400;'&gt;
-							&lt;strong&gt;Dr. John Wang &lt;/strong&gt;
-						&lt;/span&gt;
-						&lt;strong&gt;
-							&lt;a href='https://www.biodiv.tw/pi-John_Wang' target='_blank'&gt;çå¿ ä¿¡&lt;/a&gt;
-							&lt;a href='https://www.biodiv.tw/pi-John_Wang' target='_blank'&gt;
-							&lt;img src='images/maximize.png' width='20' height='15'/&gt;
-							&lt;/a&gt;
-						&lt;/strong&gt;
-					&lt;/span&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='2' height='29' width='473'&gt;
-					&lt;span class='gray14_33b'&gt;
-						&lt;strong&gt;
-						johnwang@gate.sinica.edu.tw
-						&lt;button class='btn çå¿ ä¿¡'&gt;
-							&lt;img src='images/email.png' width='20' height='15'johnwang@gate.sinica.edu.tw (Copy Email)/&gt;
-						&lt;/button&gt;
-						&lt;/strong&gt;
-					&lt;/span&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td class='gray14_33b' colspan='2'&gt;
-				&lt;span class='gray14_33b'&gt;Students: &lt;img src='images/eligible_to_take_student(s).png' width='40' height='35'/&gt;&lt;/span&gt;&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='2' height='106'&gt;â  Genetics, genomics, behavior, and evolution of social insects.
-					&lt;br&gt;â  Evolution of genome size in nematodes.
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='3'&gt;&amp;nbsp;&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='3'&gt;&lt;strong&gt;Biodiversity Research Center ä¸­å¤®ç ç©¶é¢ çç©å¤æ¨£æ§ç ç©¶ä¸­å¿&lt;/strong&gt;&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td rowspan='5' style='width: 158px;'&gt;
-					&lt;p align='center'&gt;
-					&lt;img src='images/çå¤ä¸­å¿_è¡æ¡é.jpg' height='162' width='135' /&gt;
-					&lt;/p&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='2' height='29' width='473'&gt;
-					&lt;span class='gray14_33b'&gt;
-					&lt;span style='font-weight: 400;'&gt;
-						&lt;strong&gt;Dr. Isheng Jason Tsai &lt;/strong&gt;
-					&lt;/span&gt;
-					&lt;strong&gt;
-						&lt;a href='https://www.biodiv.tw/pi-Isheng_Jason_Tsai' target='_blank'&gt;è¡æ¡é&lt;/a&gt;
-						&lt;a href='https://www.biodiv.tw/pi-Isheng_Jason_Tsai' target='_blank'&gt;
-						&lt;img src='images/maximize.png' width='20' height='15'/&gt;
-						&lt;/a&gt;
-					&lt;/strong&gt;
-					&lt;/span&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='2' height='29' width='473'&gt;
-					&lt;span class='gray14_33b'&gt;
-						&lt;strong&gt;
-							ijtsai@gate.sinica.edu.tw
-							&lt;button class='btn è¡æ¡é'&gt;
-							&lt;img src='images/email.png' width='20' height='15'ijtsai@gate.sinica.edu.tw (Copy Email)/&gt;
-							&lt;/button&gt;
-						&lt;/strong&gt;
-					&lt;/span&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td class='gray14_33b' colspan='2'&gt;
-					&lt;span class='gray14_33b'&gt;Students: &lt;img src='images/eligible_to_take_student(s).png' width='40' height='35'/&gt;&lt;/span&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='2' height='106'&gt;â  Comparative and population genomics
-					&lt;br&gt;â  Evolution of parasitism and pathogenicity
-					&lt;br&gt;â  Eukaryotic microbe (fungi and helminths) ecology and biodiversity 
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='3'&gt;&amp;nbsp;&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='3'&gt;&amp;nbsp;&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='3'&gt;&lt;strong&gt;Genomics Research Center ä¸­å¤®ç ç©¶é¢ åºå é«ç ç©¶ä¸­å¿&lt;/strong&gt;&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td rowspan='5' style='width: 158px;'&gt;
-					&lt;p align='center'&gt;
-					&lt;img src='images/åºå é«_èæ¨¹è«.jpg' height='162' width='135' /&gt;
-					&lt;/p&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='2' height='29' width='473'&gt;
-					&lt;span class='gray14_33b'&gt;
-					&lt;span style='font-weight: 400;'&gt;
-						&lt;strong&gt;Dr. Trees-Juen Chuang &lt;/strong&gt;
-					&lt;/span&gt;
-					&lt;strong&gt;
-						&lt;a href='https://www.genomics.sinica.edu.tw/index.php/tw/chuang-trees-juen-' target='_blank'&gt;èæ¨¹è«&lt;/a&gt;
-						&lt;a href='https://www.genomics.sinica.edu.tw/index.php/tw/chuang-trees-juen-' target='_blank'&gt;
-						&lt;img src='images/maximize.png' width='20' height='15'/&gt;
-						&lt;/a&gt;
-					&lt;/strong&gt;
-					&lt;/span&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='2' height='29' width='473'&gt;
-					&lt;span class='gray14_33b'&gt;
-					&lt;strong&gt;
-						trees@gate.sinica.edu.tw
-						&lt;button class='btn èæ¨¹è«'&gt;
-						&lt;img src='images/email.png' width='20' height='15'trees@gate.sinica.edu.tw (Copy Email)/&gt;
-						&lt;/button&gt;
-					&lt;/strong&gt;
-					&lt;/span&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td class='gray14_33b' colspan='2'&gt;
-					&lt;span class='gray14_33b'&gt;Students: &lt;img src='images/eligible_to_take_student(s).png' width='40' height='35'/&gt;&lt;/span&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='2' height='106'&gt;â  Bioinformatics and Computational Biology
-					&lt;br&gt;â  Comparative &amp; evolutionary genomics post-transcriptional modification
-					&lt;br&gt;â  Systems biology
-					&lt;br&gt;â  Primate evolution
-					&lt;br&gt;â  Genome annotation
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='3'&gt;&amp;nbsp;&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='3'&gt;&lt;strong&gt;Institute of Plant and Microbial Biology ä¸­å¤®ç ç©¶é¢ æ¤ç©æ¨å¾®çç©å­¸ç ç©¶æ&lt;/strong&gt;&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td rowspan='5' style='width: 158px;'&gt;
-					&lt;p align='center'&gt;
-					&lt;img src='images/æ¤å¾®æ_é³æä»°(new).jpg' height='162' width='135' /&gt;
-					&lt;/p&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='2' height='29' width='473'&gt;
-					&lt;span class='gray14_33b'&gt;
-					&lt;span style='font-weight: 400;'&gt;
-						&lt;strong&gt;Dr. Pao-Yang Chen&lt;/strong&gt;
-					&lt;/span&gt;
-					&lt;strong&gt;
-						&lt;a href='https://ipmb.sinica.edu.tw/ch/people/ipmb_researchers/chen-pao-yang' target='_blank'&gt;é³æä»°&lt;/a&gt;
-						&lt;a href='https://ipmb.sinica.edu.tw/ch/people/ipmb_researchers/chen-pao-yang' target='_blank'&gt;
-						&lt;img src='images/maximize.png' width='20' height='15'/&gt;
-						&lt;/a&gt;
-					&lt;/strong&gt;
-					&lt;/span&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='2' height='29' width='473'&gt;
-					&lt;span class='gray14_33b'&gt;
-					&lt;strong&gt;
-					paoyang@gate.sinica.edu.tw
-					&lt;button class='btn é³æä»°'&gt;
-					&lt;img src='images/email.png' width='20' height='15'paoyang@gate.sinica.edu.tw (Copy Email)/&gt;
-					&lt;/button&gt;
-					&lt;/strong&gt;
-					&lt;/span&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td class='gray14_33b' colspan='2'&gt;
-					&lt;span class='gray14_33b'&gt;Students: Yu-Chun Huang&lt;/span&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='2' height='106'&gt;â  Next generation genetics
-					&lt;br&gt;â  DNA methylation in plants
-					&lt;br&gt;â  DNA methylation landscape in plants, animals, and human
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='3'&gt;&amp;nbsp;&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='3'&gt;&lt;strong&gt;Institute of Plant and Microbial Biology ä¸­å¤®ç ç©¶é¢ æ¤ç©æ¨å¾®çç©å­¸ç ç©¶æ&lt;/strong&gt;&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td rowspan='5' style='width: 158px;'&gt;
-					&lt;p align='center'&gt;
-					&lt;img src='images/æ¤å¾®æ_é¡§é.jpg' height='162' width='135' /&gt;
-					&lt;/p&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='2' height='29' width='473'&gt;
-					&lt;span class='gray14_33b'&gt;
-					&lt;span style='font-weight: 400;'&gt;
-						&lt;strong&gt;Dr. Chuan Ku&lt;/strong&gt;
-					&lt;/span&gt;
-					&lt;strong&gt;
-						&lt;a href='https://ipmb.sinica.edu.tw/ch/people/ipmb_researchers/ku-chuan' target='_blank'&gt;é¡§é&lt;/a&gt;
-						&lt;a href='https://ipmb.sinica.edu.tw/ch/people/ipmb_researchers/ku-chuan' target='_blank'&gt;
-						&lt;img src='images/maximize.png' width='20' height='15'/&gt;
-						&lt;/a&gt;
-					&lt;/strong&gt;
-					&lt;/span&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='2' height='29' width='473'&gt;
-					&lt;span class='gray14_33b'&gt;
-					&lt;strong&gt;
-						chuanku@gate.sinica.edu.tw 
-						&lt;button class='btn é¡§é'&gt;
-							&lt;img src='images/email.png' width='20' height='15'chuanku@gate.sinica.edu.tw  (Copy Email)/&gt;
-						&lt;/button&gt;
-					&lt;/strong&gt;
-					&lt;/span&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td class='gray14_33b' colspan='2'&gt;
-					&lt;span class='gray14_33b'&gt;Students: Hsin-Ying Chang &lt;img src='images/eligible_to_take_student(s).png' width='40' height='35'/&gt;&lt;/span&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='2' height='106'&gt;â  Genome evolution and regulation
-					&lt;br&gt;â  Algae and giant viruses
-					&lt;br&gt;â  Ancient evolution
-					&lt;br&gt;â  Microbial interactions and ecology
-					&lt;br&gt;â  Single-cell omics
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='3'&gt;&amp;nbsp;&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='3'&gt;&lt;strong&gt;Institute of Plant and Microbial Biology ä¸­å¤®ç ç©¶é¢ æ¤ç©æ¨å¾®çç©å­¸ç ç©¶æ&lt;/strong&gt;&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td rowspan='5' style='width: 158px;'&gt;
-					&lt;p align='center'&gt;
-					&lt;img src='images/æ¤å¾®æ_å³äº­ç©.jpg' height='162' width='135' /&gt;
-					&lt;/p&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='2' height='29' width='473'&gt;
-					&lt;span class='gray14_33b'&gt;
-					&lt;span style='font-weight: 400;'&gt;
-						&lt;strong&gt;Dr. Ting-Ying Wu&lt;/strong&gt;
-					&lt;/span&gt;
-					&lt;strong&gt;
-						&lt;a href='https://ipmb.sinica.edu.tw/en/people/ipmb_researchers/wu-ting-ying' target='_blank'&gt;å³äº­ç©&lt;/a&gt;
-						&lt;a href='https://ipmb.sinica.edu.tw/en/people/ipmb_researchers/wu-ting-ying' target='_blank'&gt;
-						&lt;img src='images/maximize.png' width='20' height='15'/&gt;
-						&lt;/a&gt;
-					&lt;/strong&gt;
-					&lt;/span&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='2' height='29' width='473'&gt;
-					&lt;span class='gray14_33b'&gt;
-					&lt;strong&gt;
-						tingying@gate.sinica.edu.tw
-						&lt;button class='btn å³äº­ç©'&gt;
-							&lt;img src='images/email.png' width='20' height='15'tingying@gate.sinica.edu.tw  (Copy Email)/&gt;
-						&lt;/button&gt;
-					&lt;/strong&gt;
-					&lt;/span&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td class='gray14_33b' colspan='2'&gt;
-					&lt;span class='gray14_33b'&gt;Students: &lt;img src='images/eligible_to_take_student(s).png' width='40' height='35'/&gt;&lt;/span&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='2' height='106'&gt;â  Plant systems biology
-					&lt;br&gt;â  Multi-omics analysis
-					&lt;br&gt;â  Predictive biology
-					&lt;br&gt;â  Evolution of heat and drought stress
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='3'&gt;&amp;nbsp;&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='3'&gt;&lt;strong&gt;Agricultural Biotechnology Research Center ä¸­å¤®ç ç©¶é¢è¾²æ¥­çç©ç§æç ç©¶ä¸­å¿&lt;/strong&gt;&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td rowspan='5' style='width: 158px;'&gt;
-					&lt;p align='center'&gt;
-					&lt;img src='images/è¾²æ¥­çç©_é³è·æ.jpg' height='162' width='135' /&gt;
-					&lt;/p&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='2' height='29' width='473'&gt;
-					&lt;span class='gray14_33b'&gt;
-					&lt;span style='font-weight: 400;'&gt;
-						&lt;strong&gt;Dr. Ho-Ming Chen&lt;/strong&gt;
-					&lt;/span&gt;
-					&lt;strong&gt;
-						&lt;a href='https://abrc.sinica.edu.tw/faculty/?id=homing' target='_blank'&gt;é³è·æ&lt;/a&gt;
-						&lt;a href='https://abrc.sinica.edu.tw/faculty/?id=homing' target='_blank'&gt;
-						&lt;img src='images/maximize.png' width='20' height='15'/&gt;
-						&lt;/a&gt;
-					&lt;/strong&gt;
-					&lt;/span&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='2' height='29' width='473'&gt;
-					&lt;span class='gray14_33b'&gt;
-					&lt;strong&gt;
-						homing@gate.sinica.edu.tw
-						&lt;button class='btn é³è·æ'&gt;
-						&lt;img src='images/email.png' width='20' height='15'homing@gate.sinica.edu.tw (Copy Email)/&gt;
-						&lt;/button&gt;
-					&lt;/strong&gt;
-					&lt;/span&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td class='gray14_33b' colspan='2'&gt;
-					&lt;span class='gray14_33b'&gt;Students: Tzu-Hsiang Lin &lt;img src='images/eligible_to_take_student(s).png' width='40' height='35'/&gt;&lt;/span&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='2' height='106'&gt;â  Small RNA function
-					&lt;br&gt;â  Genome of non-model organism
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='3'&gt;&amp;nbsp;&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='3'&gt;&amp;nbsp;&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='3'&gt;&lt;strong&gt;Institute of Molecular Biology ä¸­å¤®ç ç©¶é¢ åå­çç©ç ç©¶æ&lt;/strong&gt;&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td rowspan='5' style='width: 158px;'&gt;
-					&lt;p align='center'&gt;
-					&lt;img src='images/åçæ_æå©ä¼¶.jpg' height='162' width='135' /&gt;
-					&lt;/p&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='2' height='29' width='473'&gt;
-					&lt;span class='gray14_33b'&gt;
-					&lt;span style='font-weight: 400;'&gt;
-						&lt;strong&gt;Dr. Chien-Ling Lin&lt;/strong&gt;
-					&lt;/span&gt;
-						&lt;strong&gt;
-							&lt;a href='https://www.imb.sinica.edu.tw/en/faculty/profile/chienling.html' target='_blank'&gt;æå©ä¼¶&lt;/a&gt;
-							&lt;a href='https://www.imb.sinica.edu.tw/en/faculty/profile/chienling.html' target='_blank'&gt;
-							&lt;img src='images/maximize.png' width='20' height='15'/&gt;
-							&lt;/a&gt;
-						&lt;/strong&gt;
-					&lt;/span&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='2' height='29' width='473'&gt;
-					&lt;span class='gray14_33b'&gt;
-					&lt;strong&gt;
-						mbcllin@gate.sinica.edu.tw
-						&lt;button class='btn æå©ä¼¶'&gt;
-						&lt;img src='images/email.png' width='20' height='15'mbcllin@gate.sinica.edu.tw (Copy Email)/&gt;
-						&lt;/button&gt;
-						&lt;/strong&gt;
-					&lt;/span&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td class='gray14_33b' colspan='2'&gt;
-					&lt;span class='gray14_33b'&gt;Students: &lt;img src='images/eligible_to_take_student(s).png' width='40' height='35'/&gt;&lt;/span&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='2' height='106'&gt;â  High-throughput experimental and computational analysis of pre-mRNA splicing regulation
-					&lt;br&gt;â  Post-transcriptional mis-regulation in diseases
-					&lt;br&gt;â  Molecular and biochemical analysis of pre-mRNA splicing and translational control                                                                                
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='3'&gt;&amp;nbsp;&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='3'&gt;&lt;strong&gt;Institute of Molecular Biology ä¸­å¤®ç ç©¶é¢ åå­çç©ç ç©¶æ&lt;/strong&gt;&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td rowspan='5' style='width: 158px;'&gt;
-					&lt;p align='center'&gt;
-					&lt;img src='images/åçæ_é³æå®.jpg' height='162' width='135' /&gt;
-					&lt;/p&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='2' height='29' width='473'&gt;
-					&lt;span class='gray14_33b'&gt;
-					&lt;span style='font-weight: 400;'&gt;
-						&lt;strong&gt;Dr. Sheng-Hong Chen &lt;/strong&gt;
-					&lt;/span&gt;
-					&lt;strong&gt;
-						&lt;a href='https://www.imb.sinica.edu.tw/en/faculty/profile/shchen.html' target='_blank'&gt;é³æå®&lt;/a&gt;
-						&lt;a href='https://www.imb.sinica.edu.tw/en/faculty/profile/shchen.html' target='_blank'&gt;
-						&lt;img src='images/maximize.png' width='20' height='15'/&gt;
-						&lt;/a&gt;
-					&lt;/strong&gt;
-					&lt;/span&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='2' height='29' width='473'&gt;
-					&lt;span class='gray14_33b'&gt;
-					&lt;strong&gt;
-						shengchen@gate.sinica.edu.tw
-						&lt;button class='btn é³æå®'&gt;
-						&lt;img src='images/email.png' width='20' height='15'shengchen@gate.sinica.edu.tw (Copy Email)/&gt;
-						&lt;/button&gt;
-						&lt;/strong&gt;
-					&lt;/span&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td class='gray14_33b' colspan='2'&gt;
-				&lt;span class='gray14_33b'&gt;Students: &lt;img src='images/eligible_to_take_student(s).png' width='40' height='35'/&gt;&lt;/span&gt;&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='2' height='106'&gt;â  Single-cell systems biology
-					&lt;br&gt;â  Signaling dynamics
-					&lt;br&gt;â  Cancer genomics
-					&lt;br&gt;â  Drug combination design
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='3'&gt;&amp;nbsp;&lt;/td&gt;
-			&lt;/tr&gt;
-						&lt;tr&gt;
-				&lt;td colspan='3'&gt;&lt;strong&gt;Institute of Molecular Biology ä¸­å¤®ç ç©¶é¢ åå­çç©ç ç©¶æ&lt;/strong&gt;&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td rowspan='5' style='width: 158px;'&gt;
-					&lt;p align='center'&gt;
-					&lt;img src='images/åçæ_ææç¿.jpg' height='162' width='135' /&gt;
-					&lt;/p&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='2' height='29' width='473'&gt;
-					&lt;span class='gray14_33b'&gt;
-					&lt;span style='font-weight: 400;'&gt;
-						&lt;strong&gt;Dr. Wei-Hsiang Lin &lt;/strong&gt;
-					&lt;/span&gt;
-					&lt;strong&gt;
-						&lt;a href='https://www.imb.sinica.edu.tw/en/faculty/profile/whlin.html' target='_blank'&gt;ææç¿&lt;/a&gt;
-						&lt;a href='https://www.imb.sinica.edu.tw/en/faculty/profile/whlin.html' target='_blank'&gt;
-						&lt;img src='images/maximize.png' width='20' height='15'/&gt;
-						&lt;/a&gt;
-					&lt;/strong&gt;
-					&lt;/span&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='2' height='29' width='473'&gt;
-					&lt;span class='gray14_33b'&gt;
-					&lt;strong&gt;
-						whl243@gate.sinica.edu.tw
-						&lt;button class='btn ææç¿'&gt;
-						&lt;img src='images/email.png' width='20' height='15'whl243@gate.sinica.edu.tw (Copy Email)/&gt;
-						&lt;/button&gt;
-						&lt;/strong&gt;
-					&lt;/span&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td class='gray14_33b' colspan='2'&gt;
-				&lt;span class='gray14_33b'&gt;Students: &lt;/span&gt;&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='2' height='106'&gt;
-					â  Mathematical model for reaction network and cell growth
-					&lt;br&gt;â  Community growth in ecology
-					&lt;br&gt;â  Microfluidic culture in bacteria and time-laps microscopy
-					&lt;br&gt;â  Using fluorescent biosensor to study metabolism
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='3'&gt;&amp;nbsp;&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td&gt;
-					&lt;div id='anchor_cu'&gt;&lt;/div&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='3' class='red_9933b'&gt;Core Faculty in Collaborative Universities&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='3'&gt;&amp;nbsp;&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='3'&gt;&lt;strong&gt;Institute of Bioinformatics and Structural Biology, National Tsing Hua University&lt;br&gt;åç«æ¸è¯å¤§å­¸ çç©è³è¨èçµæ§çç©ç ç©¶æ&lt;/strong&gt;&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td rowspan='5' style='width: 158px;'&gt;
-					&lt;p align='center'&gt;
-					&lt;img src='images/æ¸å¤§_æ¥ç«å¨.jpg' height='162' width='135' /&gt;
-					&lt;/p&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='2' height='29' width='473'&gt;
-					&lt;span class='gray14_33b'&gt;
-					&lt;span style='font-weight: 400;'&gt;
-						&lt;strong&gt;Dr. Lee-Wei Yang&lt;/strong&gt;
-					&lt;/span&gt;
-					&lt;strong&gt;
-						&lt;a href='https://khub.nthu.edu.tw/researcherProfile?uuid=959E0BD0-DBBD-478F-90B5-A7583BBFE683' target='_blank'&gt;æ¥ç«å¨&lt;/a&gt;
-						&lt;a href='https://khub.nthu.edu.tw/researcherProfile?uuid=959E0BD0-DBBD-478F-90B5-A7583BBFE683' target='_blank'&gt;
-						&lt;img src='images/maximize.png' width='20' height='15'/&gt;
-						&lt;/a&gt;
-					&lt;/strong&gt;
-					&lt;/span&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='2' height='29' width='473'&gt;
-					&lt;span class='gray14_33b'&gt;
-					&lt;strong&gt;
-						lwyang@life.nthu.edu.tw
-						&lt;button class='btn æ¥ç«å¨'&gt;
-						&lt;img src='images/email.png' width='20' height='15'lwyang@life.nthu.edu.tw (Copy Email)/&gt;
-						&lt;/button&gt;
-					&lt;/strong&gt;
-					&lt;/span&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td class='gray14_33b' colspan='2'&gt;
-					&lt;span class='gray14_33b'&gt;Students: &lt;img src='images/eligible_to_take_student(s).png' width='40' height='35'/&gt;&lt;/span&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='2' height='106'&gt;â  Molecular Modeling
-					&lt;br&gt;â  Theoretical Biophysics
-					&lt;br&gt;â  Structural Bioinformatics
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='3'&gt;&amp;nbsp;&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='3'&gt;&lt;strong&gt;Institute of Bioinformatics and Structural Biology, National Tsing Hua University&lt;br&gt;åç«æ¸è¯å¤§å­¸ çç©è³è¨èçµæ§çç©ç ç©¶æ&lt;/strong&gt;&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td rowspan='5' style='width: 158px;'&gt;
-					&lt;p align='center'&gt;
-					&lt;img src='images/æ¸å¤§_å¼µç­±æ¶µ.png' height='162' width='135' /&gt;
-					&lt;/p&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='2' height='29' width='473'&gt;
-					&lt;span class='gray14_33b'&gt;
-					&lt;span style='font-weight: 400;'&gt;
-						&lt;strong&gt;Dr. Hsiao-Han Chang&lt;/strong&gt;
-					&lt;/span&gt;
-					&lt;strong&gt;
-						&lt;a href='https://khub.nthu.edu.tw/researcherProfile?uuid=1625c256-2782-4b33-84a8-07a138c8ad6d' target='_blank'&gt;å¼µç­±æ¶µ&lt;/a&gt;
-						&lt;a href='https://khub.nthu.edu.tw/researcherProfile?uuid=1625c256-2782-4b33-84a8-07a138c8ad6d' target='_blank'&gt;
-						&lt;img src='images/maximize.png' width='20' height='15'/&gt;
-						&lt;/a&gt;
-					&lt;/strong&gt;
-					&lt;/span&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='2' height='29' width='473'&gt;
-					&lt;span class='gray14_33b'&gt;
-					&lt;strong&gt;
-						hhchang@life.nthu.edu.tw
-						&lt;button class='btn å¼µç­±æ¶µ'&gt;
-						&lt;img src='images/email.png' width='20' height='15'hhchang@life.nthu.edu.tw (Copy Email)/&gt;
-					&lt;/button&gt;
-					&lt;/strong&gt;
-					&lt;/span&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td class='gray14_33b' colspan='2'&gt;
-					&lt;span class='gray14_33b'&gt;Students: Daniel Garcia-Ruiz &lt;img src='images/eligible_to_take_student(s).png' width='40' height='35'/&gt;&lt;/span&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='2' height='106'&gt;â  Genomics
-					&lt;br&gt;â  Pathogen evolution 
-					&lt;br&gt;â  Computational Biology
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='3'&gt;&amp;nbsp;&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='3'&gt;&lt;strong&gt;Institute of Statistics, National Yang Ming Chiao Tung University&lt;br&gt;åç«é½æäº¤éå¤§å­¸ çµ±è¨å­¸ç ç©¶æ&lt;/strong&gt;&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td rowspan='5' style='width: 158px;'&gt;
-					&lt;p align='center'&gt;
-					&lt;img src='images/äº¤å¤§_ç§é´»è.jpg' height='162' width='135' /&gt;
-					&lt;/p&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='2' height='29' width='473'&gt;
-					&lt;span class='gray14_33b'&gt;
-					&lt;span style='font-weight: 400;'&gt;
-						&lt;strong&gt;Dr. Henry Horng-Shing Lu &lt;/strong&gt;
-					&lt;/span&gt;
-					&lt;strong&gt;
-						&lt;a href='https://stat.nycu.edu.tw/en/members/teacher/Henry-Horng-Shing-Lu-58192428' target='_blank'&gt;ç§é´»è&lt;/a&gt;
-						&lt;a href='https://stat.nycu.edu.tw/en/members/teacher/Henry-Horng-Shing-Lu-58192428' target='_blank'&gt;
-						&lt;img src='images/maximize.png' width='20' height='15'/&gt;
-						&lt;/a&gt;
-					&lt;/strong&gt;
-					&lt;/span&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='2' height='29' width='473'&gt;
-				&lt;span class='gray14_33b'&gt;
-					&lt;strong&gt;
-						henryhslu@nycu.edu.tw
-						&lt;button class='btn ç§é´»è'&gt;
-						&lt;img src='images/email.png' width='20' height='15'henryhslu@nycu.edu.tw (Copy Email)/&gt;
-						&lt;/button&gt;
-					&lt;/strong&gt;
-				&lt;/span&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td class='gray14_33b' colspan='2'&gt;
-					&lt;span class='gray14_33b'&gt;Students: &lt;img src='images/eligible_to_take_student(s).png' width='40' height='35'/&gt;&lt;/span&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='2' height='106'&gt;â  Scientific computing
-					&lt;br&gt;â  Image science
-					&lt;br&gt;â  Bioinformatics
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='3'&gt;&amp;nbsp;&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='3'&gt;&lt;strong&gt;Institute of Bioinformatics and Systems Biology, National Yang Ming Chiao Tung University&lt;br&gt;åç«é½æäº¤éå¤§å­¸ çç©è³è¨åç³»çµ±çç©ç ç©¶æ&lt;/strong&gt;&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td rowspan='5' style='width: 158px;'&gt;
-					&lt;p align='center'&gt;
-					&lt;img src='images/äº¤å¤§_æ¥é²æ¨(new).jpg' height='162' width='135' /&gt;
-					&lt;/p&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='2' height='29' width='473'&gt;
-					&lt;span class='gray14_33b'&gt;
-						&lt;span style='font-weight: 400;'&gt;
-							&lt;strong&gt;Dr. Jinn-Moon Yang&lt;/strong&gt;
-						&lt;/span&gt;
-						&lt;strong&gt;
-							&lt;a href='http://bioxgem.life.nctu.edu.tw/bioxgem/#tab_professor' target='_blank'&gt;æ¥é²æ¨&lt;/a&gt;
-							&lt;a href='http://bioxgem.life.nctu.edu.tw/bioxgem/#tab_professor' target='_blank'&gt;
-							&lt;img src='images/maximize.png' width='20' height='15'/&gt;
-							&lt;/a&gt;
-						&lt;/strong&gt;
-					&lt;/span&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='2' height='29' width='473'&gt;
-					&lt;span class='gray14_33b'&gt;
-					&lt;strong&gt;
-						moon@faculty.nctu.edu.tw
-						&lt;button class='btn æ¥é²æ¨'&gt;
-						&lt;img src='images/email.png' width='20' height='15'moon@faculty.nctu.edu.tw (Copy Email)/&gt;
-						&lt;/button&gt;
-					&lt;/strong&gt;
-					&lt;/span&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td class='gray14_33b' colspan='2'&gt;
-				&lt;span class='gray14_33b'&gt;Students: &lt;img src='images/eligible_to_take_student(s).png' width='40' height='35'/&gt;&lt;/span&gt;&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='2' height='106'&gt;â  Bioinformatics systems biology
-					&lt;br&gt;â  Drug design
-					&lt;br&gt;â  Systems biology
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='3'&gt;&amp;nbsp;&lt;/td&gt;
-			&lt;/tr&gt;									
-			&lt;tr&gt;
-				&lt;td colspan='3'&gt;&lt;strong&gt;Institute of Bioinformatics and Systems Biology, National Yang Ming Chiao Tung University&lt;br&gt;åç«é½æäº¤éå¤§å­¸ çç©è³è¨åç³»çµ±çç©ç ç©¶æ&lt;/strong&gt;&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td rowspan='5' style='width: 158px;'&gt;
-					&lt;p align='center'&gt;
-						&lt;img src='images/äº¤å¤§_æ±æºç.jpg' height='162' width='135' /&gt;
-					&lt;/p&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='2' height='29' width='473'&gt;
-					&lt;span class='gray14_33b'&gt;
-						&lt;span style='font-weight: 400;'&gt;
-							&lt;strong&gt;Dr. Jhih-Wei Chu&lt;/strong&gt;
-						&lt;/span&gt;
-						&lt;strong&gt;
-							&lt;a href='https://sites.google.com/nctu.edu.tw/jwchulab/professor' target='_blank'&gt;æ±æºç&lt;/a&gt;
-							&lt;a href='https://sites.google.com/nctu.edu.tw/jwchulab/professor' target='_blank'&gt;
-							&lt;img src='images/maximize.png' width='20' height='15'/&gt;
-							&lt;/a&gt;
-						&lt;/strong&gt;
-					&lt;/span&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='2' height='29' width='473'&gt;
-					&lt;span class='gray14_33b'&gt;
-					&lt;strong&gt;
-						jwchu@nctu.edu.tw
-						&lt;button class='btn æ±æºç'&gt;
-						&lt;img src='images/email.png' width='20' height='15'jwchu@nctu.edu.tw (Copy Email)/&gt;
-						&lt;/button&gt;
-					&lt;/strong&gt;
-					&lt;/span&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td class='gray14_33b' colspan='2'&gt;
-					&lt;span class='gray14_33b'&gt;Students: &lt;img src='images/eligible_to_take_student(s).png' width='40' height='35'/&gt;&lt;/span&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='2' height='106'&gt;â  Biosystems simulation
-					&lt;br&gt;â  Multiscale modeling theory
-					&lt;br&gt;â  Protein conformational changes and alloetery
-					&lt;br&gt;â  Drug discovery and development
-					&lt;br&gt;â  Molecular kinetics
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='3'&gt;&amp;nbsp;&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='3'&gt;&lt;strong&gt;Institute of Bioinformatics and Systems Biology, National Yang Ming Chiao Tung University&lt;br&gt;åç«é½æäº¤éå¤§å­¸ çç©è³è¨åç³»çµ±çç©ç ç©¶æ&lt;/strong&gt;&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td rowspan='5' style='width: 158px;'&gt;
-					&lt;p align='center'&gt;
-						&lt;img src='images/äº¤å¤§_æ¯æ³°å.jpg' height='162' width='135' /&gt;
-					&lt;/p&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='2' height='29' width='473'&gt;
-					&lt;span class='gray14_33b'&gt;
-					&lt;span style='font-weight: 400;'&gt;
-						&lt;strong&gt;Dr. Tai-Ming Ko&lt;/strong&gt;
-					&lt;/span&gt;
-					&lt;strong&gt;
-						&lt;a href='https://dbt.nycu.edu.tw/faculty/ko-tai-ming/' target='_blank'&gt; æ¯æ³°å&lt;/a&gt;
-						&lt;a href='https://dbt.nycu.edu.tw/faculty/ko-tai-ming/' target='_blank'&gt;
-						&lt;img src='images/maximize.png' width='20' height='15'/&gt;
-						&lt;/a&gt;
-					&lt;/strong&gt;
-					&lt;/span&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='2' height='29' width='473'&gt;
-					&lt;span class='gray14_33b'&gt;
-					&lt;strong&gt;
-						taiming23@gmail.com 
-						&lt;button class='btn  æ¯æ³°å'&gt;
-						&lt;img src='images/email.png' width='20' height='15'taiming23@gmail.com  (Copy Email)/&gt;
-						&lt;/button&gt;
-					&lt;/strong&gt;
-					&lt;/span&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td class='gray14_33b' colspan='2'&gt;
-					&lt;span class='gray14_33b'&gt;Students: &lt;img src='images/eligible_to_take_student(s).png' width='40' height='35'/&gt;&lt;/span&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='2' height='106'&gt;â  Single cell sequencing
-					&lt;br&gt;â  Nano-pore sequencing
-					&lt;br&gt;â  Immunogenomics
-					&lt;br&gt;â  Pharmacogenomics
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='3'&gt;&amp;nbsp;&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='3'&gt;&amp;nbsp;&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='3'&gt;&lt;strong&gt;Institute of BioMedical Informatics, National Yang Ming Chiao Tung University&lt;br&gt;
-					åç«é½æäº¤éå¤§å­¸ çç©é«å­¸è³è¨ç ç©¶æ&lt;/strong&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td rowspan='5' style='width: 158px;'&gt;
-				&lt;p align='center'&gt;
-				&lt;img src='images/é½æ_é»å®£èª .jfif' height='162' width='135' /&gt;&lt;/p&gt;&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='2' height='29' width='473'&gt;
-					&lt;span class='gray14_33b'&gt;
-					&lt;span style='font-weight: 400;'&gt;
-						&lt;strong&gt;Dr. Hsuan-Cheng Huang&lt;/strong&gt;
-					&lt;/span&gt;
-					&lt;strong&gt;
-						&lt;a href='https://bmi.nycu.edu.tw/en/hsuan-cheng-huang/' target='_blank'&gt;é»å®£èª &lt;/a&gt;
-						&lt;a href='https://bmi.nycu.edu.tw/en/hsuan-cheng-huang/' target='_blank'&gt;
-						&lt;img src='images/maximize.png' width='20' height='15'/&gt;
-						&lt;/a&gt;
-					&lt;/strong&gt;
-					&lt;/span&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='2' height='29' width='473'&gt;
-					&lt;span class='gray14_33b'&gt;
-					&lt;strong&gt;
-						hsuancheng@nycu.edu.tw
-						&lt;button class='btn é»å®£èª '&gt;
-						&lt;img src='images/email.png' width='20' height='15'hsuancheng@nycu.edu.tw (Copy Email)/&gt;
-						&lt;/button&gt;
-					&lt;/strong&gt;
-					&lt;/span&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td class='gray14_33b' colspan='2'&gt;
-					&lt;span class='gray14_33b'&gt;Students: Ping-Yun Ou &lt;img src='images/eligible_to_take_student(s).png' width='40' height='35'/&gt;&lt;/span&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='2' height='106'&gt;â  Networks biology
-					&lt;br&gt;â  Systems biology
-					&lt;br&gt;â  Bioinformatics
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='3'&gt;&amp;nbsp;&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='3'&gt;&amp;nbsp;&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='3'&gt;&lt;strong&gt;Institute of BioMedical Informatics, National Yang Ming Chiao Tung University&lt;br&gt;
-					åç«é½æäº¤éå¤§å­¸ çç©é«å­¸è³è¨ç ç©¶æ&lt;/strong&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td rowspan='5' style='width: 158px;'&gt;
-					&lt;p align='center'&gt;
-					&lt;img src='images/é½æ_ææ¯æ¶.jpg' height='162' width='135' /&gt;
-					&lt;/p&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='2' height='29' width='473'&gt;
-					&lt;span class='gray14_33b'&gt;
-						&lt;span style='font-weight: 400;'&gt;
-							&lt;strong&gt;Dr. Chen-Ching Lin&lt;/strong&gt;
-						&lt;/span&gt;
-						&lt;strong&gt;
-							&lt;a href='https://bmi.nycu.edu.tw/en/chen-ching-lin/' target='_blank'&gt;ææ¯æ¶&lt;/a&gt;
-							&lt;a href='https://bmi.nycu.edu.tw/en/chen-ching-lin/' target='_blank'&gt;
-							&lt;img src='images/maximize.png' width='20' height='15'/&gt;
-							&lt;/a&gt;
-						&lt;/strong&gt;
-					&lt;/span&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='2' height='29' width='473'&gt;
-					&lt;span class='gray14_33b'&gt;
-					&lt;strong&gt;
-						chenching.lin@nycu.edu.tw
-						&lt;button class='btn ææ¯æ¶'&gt;
-						&lt;img src='images/email.png' width='20' height='15'chaosLin@ym.edu.tw (Copy Email)/&gt;
-						&lt;/button&gt;
-					&lt;/strong&gt;
-					&lt;/span&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td class='gray14_33b' colspan='2'&gt;
-				&lt;span class='gray14_33b'&gt;Students: &lt;img src='images/eligible_to_take_student(s).png' width='40' height='35'/&gt;&lt;/span&gt;&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='2' height='106'&gt;â  Network Biology
-				&lt;br&gt;â  Computational Biology
-				&lt;br&gt;â  Bioinformatics
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='3'&gt;&amp;nbsp;&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='3'&gt;&lt;strong&gt;Institute of BioMedical Informatics, National Yang Ming Chiao Tung University&lt;br&gt;
-					åç«é½æäº¤éå¤§å­¸ çç©é«å­¸è³è¨ç ç©¶æ&lt;/strong&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-			&lt;td rowspan='5' style='width: 158px;'&gt;
-				&lt;p align='center'&gt;
-				&lt;img src='images/é½æ_é»å½¥è¯.jpg' height='162' width='135' /&gt;&lt;/p&gt;&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='2' height='29' width='473'&gt;
-					&lt;span class='gray14_33b'&gt;
-					&lt;span style='font-weight: 400;'&gt;
-						&lt;strong&gt;Dr. Yen-Hua Huang&lt;/strong&gt;
-					&lt;/span&gt;
-					&lt;strong&gt;
-						&lt;a href='https://bmi.nycu.edu.tw/en/yen-hua-huang/' target='_blank'&gt;é»å½¥è¯&lt;/a&gt;
-						&lt;a href='https://bmi.nycu.edu.tw/en/yen-hua-huang/' target='_blank'&gt;
-						&lt;img src='images/maximize.png' width='20' height='15'/&gt;
-						&lt;/a&gt;
-					&lt;/strong&gt;
-					&lt;/span&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='2' height='29' width='473'&gt;
-					&lt;span class='gray14_33b'&gt;
-						&lt;strong&gt;
-						yhhuang@nycu.edu.tw
-						&lt;button class='btn é»å½¥è¯'&gt;
-							&lt;img src='images/email.png' width='20' height='15'yhhuang@nycu.edu.tw (Copy Email)/&gt;
-						&lt;/button&gt;
-						&lt;/strong&gt;
-					&lt;/span&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td class='gray14_33b' colspan='2'&gt;
-					&lt;span class='gray14_33b'&gt;Students: &lt;/span&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='2' height='106'&gt;â  NGS data analysis and integrated interpretation (e.g. integration with heterogeneous data sources)
-					&lt;br&gt;â  Annotation of new genomes and comparative genomics based data mining
-					&lt;br&gt;â  Human gene expression profile analysis and regulatory circuit reconstruction
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='3'&gt;&amp;nbsp;&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='3'&gt;&lt;strong&gt;Institute of BioMedical Informatics, National Yang Ming Chiao Tung University&lt;br&gt;
-					åç«é½æäº¤éå¤§å­¸ çç©é«å­¸è³è¨ç ç©¶æ&lt;/strong&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td rowspan='5' style='width: 158px;'&gt;
-					&lt;p align='center'&gt;
-						&lt;img src='images/é½æäº¤å¤§_å³ä¿ç©.jpg' height='162' width='135' /&gt;
-					&lt;/p&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='2' height='29' width='473'&gt;
-					&lt;span class='gray14_33b'&gt;
-					&lt;span style='font-weight: 400;'&gt;
-						&lt;strong&gt;Dr. Chun-Ying  Wu&lt;/strong&gt;
-					&lt;/span&gt;
-					&lt;strong&gt;
-						&lt;a href='https://bmi.nycu.edu.tw/en/%e5%90%b3%e4%bf%8a%e7%a9%8e-%e6%95%99%e6%8e%88/' target='_blank'&gt;å³ä¿ç©&lt;/a&gt;
-						&lt;a href='https://bmi.nycu.edu.tw/en/%e5%90%b3%e4%bf%8a%e7%a9%8e-%e6%95%99%e6%8e%88/' target='_blank'&gt;
-						&lt;img src='images/maximize.png' width='20' height='15'/&gt;
-						&lt;/a&gt;
-					&lt;/strong&gt;
-					&lt;/span&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='2' height='29' width='473'&gt;
-					&lt;span class='gray14_33b'&gt;
-					&lt;strong&gt;
-						dr.wu.taiwan@gmail.com
-						&lt;button class='btn å³ä¿ç©'&gt;
-						&lt;img src='images/email.png' width='20' height='15'dr.wu.taiwan@gmail.com (Copy Email)/&gt;
-						&lt;/button&gt;
-					&lt;/strong&gt;
-					&lt;/span&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td class='gray14_33b' colspan='2'&gt;
-					&lt;span class='gray14_33b'&gt;Students: &lt;/span&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='2' height='106'&gt;â  Microbiota and human diseases
-					&lt;br&gt;â  Health big data research
-					&lt;br&gt;â  Digestive cancer translational research
-					&lt;br&gt;â  Biomarkers and biochips
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='3'&gt;&amp;nbsp;&lt;/td&gt;
-			&lt;/tr&gt;
-						&lt;tr&gt;
-				&lt;td colspan='3'&gt;&amp;nbsp;&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='3'&gt;&lt;strong&gt;Institute of BioMedical Informatics, National Yang Ming Chiao Tung University&lt;br&gt;
-					åç«é½æäº¤éå¤§å­¸ çç©é«å­¸è³è¨ç ç©¶æ&lt;/strong&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td rowspan='5' style='width: 158px;'&gt;
-					&lt;p align='center'&gt;
-						&lt;img src='images/é½æäº¤å¤§_èå®¶ç.jpg' height='162' width='135' /&gt;
-					&lt;/p&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='2' height='29' width='473'&gt;
-					&lt;span class='gray14_33b'&gt;
-					&lt;span style='font-weight: 400;'&gt;
-						&lt;strong&gt;Dr. Emily Chia-Yu Su&lt;/strong&gt;
-					&lt;/span&gt;
-					&lt;strong&gt;
-						&lt;a href='https://bmi.nycu.edu.tw/%E8%98%87%E5%AE%B6%E7%8E%89-chia-yu-su/' target='_blank'&gt;èå®¶ç&lt;/a&gt;
-						&lt;a href='https://bmi.nycu.edu.tw/%E8%98%87%E5%AE%B6%E7%8E%89-chia-yu-su/' target='_blank'&gt;
-						&lt;img src='images/maximize.png' width='20' height='15'/&gt;
-						&lt;/a&gt;
-					&lt;/strong&gt;
-					&lt;/span&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='2' height='29' width='473'&gt;
-					&lt;span class='gray14_33b'&gt;
-					&lt;strong&gt;
-						emilysu@nycu.edu.tw
-						&lt;button class='btn èå®¶ç'&gt;
-						&lt;img src='images/email.png' width='20' height='15'emilysu@nycu.edu.tw (Copy Email)/&gt;
-						&lt;/button&gt;
-					&lt;/strong&gt;
-					&lt;/span&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td class='gray14_33b' colspan='2'&gt;
-					&lt;span class='gray14_33b'&gt;Students: &lt;/span&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='2' height='106'&gt;
-				        â  Medical Informatics / Clinical Decision Support
-					&lt;br&gt;â  Machine Learning / Deep Learning
-					&lt;br&gt;â  Natural Language Processing / Biomedical Text Mining / Info-epidemiology
-					&lt;br&gt;â  Medical Image Processing
-					&lt;br&gt;â  Bioinformatics / Immunoinformatics 
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='3'&gt;&amp;nbsp;&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='3'&gt;&lt;strong&gt;Graduate Institute of Biomedical Electronics and Bioinformatics, National Taiwan University&lt;br&gt;
-					åç«èºç£å¤§å­¸ çé«é»å­èè³è¨å­¸ç ç©¶æ&lt;/strong&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td rowspan='5' style='width: 158px;'&gt;
-					&lt;p align='center'&gt;
-					&lt;img src='images/å°å¤§_é³ä¸­å¹³.jpg' height='162' width='135' /&gt;
-					&lt;/p&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='2' height='29' width='473'&gt;
-					&lt;span class='gray14_33b'&gt;
-					&lt;span style='font-weight: 400;'&gt;
-						&lt;strong&gt;Dr. Chung-Ping Chen&lt;/strong&gt;
-					&lt;/span&gt;
-					&lt;strong&gt;
-						&lt;a href='https://www.ee.ntu.edu.tw/profile1.php?teacher_id=943008' target='_blank'&gt;é³ä¸­å¹³&lt;/a&gt;
-						&lt;a href='https://www.ee.ntu.edu.tw/profile1.php?teacher_id=943008' target='_blank'&gt;
-						&lt;img src='images/maximize.png' width='20' height='15'/&gt;
-						&lt;/a&gt;
-					&lt;/strong&gt;
-					&lt;/span&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='2' height='29' width='473'&gt;
-					&lt;span class='gray14_33b'&gt;
-					&lt;strong&gt;
-						cpchen@ntu.edu.tw 
-						&lt;button class='btn é³ä¸­å¹³'&gt;
-						&lt;img src='images/email.png' width='20' height='15'cpchen@ntu.edu.tw  (Copy Email)/&gt;
-						&lt;/button&gt;
-					&lt;/strong&gt;
-					&lt;/span&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td class='gray14_33b' colspan='2'&gt;
-					&lt;span class='gray14_33b'&gt;Students: &lt;img src='images/eligible_to_take_student(s).png' width='40' height='35'/&gt;&lt;/span&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='2' height='106'&gt;â  Statistical Timing Analysis
-					&lt;br&gt;â  Circuit Simulation and Optimization
-					&lt;br&gt;â  Microprocessor Design                            
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='3'&gt;&amp;nbsp;&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='3'&gt;&lt;strong&gt;Graduate Institute of Biomedical Electronics and Bioinformatics, National Taiwan University&lt;br&gt;
-				åç«èºç£å¤§å­¸ çé«é»å­èè³è¨å­¸ç ç©¶æ&lt;/strong&gt;&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td rowspan='5' style='width: 158px;'&gt;
-					&lt;p align='center'&gt;
-						&lt;img src='images/å°å¤§_é»å¿µç¥.jpg' height='162' width='135' /&gt;
-					&lt;/p&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='2' height='29' width='473'&gt;
-					&lt;span class='gray14_33b'&gt;
-					&lt;span style='font-weight: 400;'&gt;
-						&lt;strong&gt;Dr. Nien-Tsu Huang&lt;/strong&gt;
-					&lt;/span&gt;
-					&lt;strong&gt;
-						&lt;a href='https://sites.google.com/ntu.edu.tw/nientsuhuang/people?authuser=0' target='_blank'&gt;é»å¿µç¥&lt;/a&gt;
-						&lt;a href='https://sites.google.com/ntu.edu.tw/nientsuhuang/people?authuser=0' target='_blank'&gt;
-						&lt;img src='images/maximize.png' width='20' height='15'/&gt;
-						&lt;/a&gt;
-					&lt;/strong&gt;
-					&lt;/span&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='2' height='29' width='473'&gt;
-					&lt;span class='gray14_33b'&gt;
-						&lt;strong&gt;
-						nthuang@ntu.edu.tw 
-						&lt;button class='btn é»å¿µç¥'&gt;
-						&lt;img src='images/email.png' width='20' height='15'nthuang@ntu.edu.tw  (Copy Email)/&gt;
-						&lt;/button&gt;
-						&lt;/strong&gt;
-					&lt;/span&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td class='gray14_33b' colspan='2'&gt;
-					&lt;span class='gray14_33b'&gt;Students: &lt;/span&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='2' height='106'&gt;â  developing integrated electrical, optical and mechanical miniaturized fluidics and sensors for biological applications, such as cellular biology, drug screening, and disease diagnosis
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='3'&gt;&amp;nbsp;&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='3'&gt;&lt;strong&gt;Graduate Institute of Biomedical Electronics and Bioinformatics, National Taiwan University&lt;br&gt;
-				åç«èºç£å¤§å­¸ çé«é»å­èè³è¨å­¸ç ç©¶æ&lt;/strong&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td rowspan='5' style='width: 158px;'&gt;
-				&lt;p align='center'&gt;
-					&lt;img src='images/å°å¤§_é­æé½¡.jpg' height='162' width='135' /&gt;&lt;/p&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='2' height='29' width='473'&gt;
-					&lt;span class='gray14_33b'&gt;
-					&lt;span style='font-weight: 400;'&gt;
-						&lt;strong&gt;Dr. Po-Ling Kuo&lt;/strong&gt;
-					&lt;/span&gt;
-					&lt;strong&gt;
-						&lt;a href='https://www.ee.ntu.edu.tw/profile1.php?teacher_id=901172&amp;p=3' target='_blank'&gt;é­æé½¡&lt;/a&gt;
-						&lt;a href='https://www.ee.ntu.edu.tw/profile1.php?teacher_id=901172&amp;p=3' target='_blank'&gt;
-						&lt;img src='images/maximize.png' width='20' height='15'/&gt;
-						&lt;/a&gt;
-					&lt;/strong&gt;
-					&lt;/span&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='2' height='29' width='473'&gt;
-					&lt;span class='gray14_33b'&gt;
-						&lt;strong&gt;
-						poling@ntu.edu.tw 
-						&lt;button class='btn é­æé½¡'&gt;
-							&lt;img src='images/email.png' width='20' height='15'poling@ntu.edu.tw  (Copy Email)/&gt;
-						&lt;/button&gt;
-						&lt;/strong&gt;
-					&lt;/span&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td class='gray14_33b' colspan='2'&gt;
-					&lt;span class='gray14_33b'&gt;Students: &lt;/span&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='2' height='106'&gt;â  Biophysics
-					&lt;br&gt;â  Mechanobiology
-					&lt;br&gt;â  Biomechanics 
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='3'&gt;&amp;nbsp;&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='3'&gt;&lt;strong&gt;Graduate Institute of Physiology, National Taiwan University&lt;br&gt;
-					åç«èºç£å¤§å­¸ ççå­¸ç ç©¶æ&lt;/strong&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td rowspan='5' style='width: 158px;'&gt;
-					&lt;p align='center'&gt;
-					&lt;img src='images/å°å¤§_è³´äº®å¨.jpg' height='162' width='135' /&gt;
-					&lt;/p&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='2' height='29' width='473'&gt;
-					&lt;span class='gray14_33b'&gt;
-					&lt;span style='font-weight: 400;'&gt;
-						&lt;strong&gt;Dr. Liang-Chuan Lai&lt;/strong&gt;
-					&lt;/span&gt;
-					&lt;strong&gt;
-						&lt;a href='https://physiology.mc.ntu.edu.tw/En/Faculty/Faculty?id=26&amp;openid=2' target='_blank'&gt;è³´äº®å¨&lt;/a&gt;
-						&lt;a href='https://physiology.mc.ntu.edu.tw/En/Faculty/Faculty?id=26&amp;openid=2' target='_blank'&gt;
-						&lt;img src='images/maximize.png' width='20' height='15'/&gt;
-						&lt;/a&gt;
-					&lt;/strong&gt;
-					&lt;/span&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='2' height='29' width='473'&gt;
-					&lt;span class='gray14_33b'&gt;
-						&lt;strong&gt;
-						llai@ntu.edu.tw 
-						&lt;button class='btn è³´äº®å¨'&gt;
-							&lt;img src='images/email.png' width='20' height='15'llai@ntu.edu.tw  (Copy Email)/&gt;
-						&lt;/button&gt;
-						&lt;/strong&gt;
-					&lt;/span&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td class='gray14_33b' colspan='2'&gt;
-					&lt;span class='gray14_33b'&gt;Students: &lt;img src='images/eligible_to_take_student(s).png' width='40' height='35'/&gt;&lt;/span&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='2' height='106'&gt;â  using microarray or next generation sequencing to explore the cancer genomics
-					&lt;br&gt;â  Investigation of regulatory mechanism of NDRG1 upon reoxygenation
-					&lt;br&gt;â  Regulation of transcription and metastasis of semaphorin family in lung cancer
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='3'&gt;&amp;nbsp;&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='3'&gt;&lt;strong&gt;Institute of Health Data Analytics and Statistics, National Taiwan University&lt;br&gt;
-					åç«èºç£å¤§å­¸ å¥åº·æ¸æææçµ±è¨ç ç©¶æ
-&lt;/strong&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td rowspan='5' style='width: 158px;'&gt;
-				&lt;p align='center'&gt;
-				&lt;img src='images/å°å¤§_ç§å­å½¬(new).jpg' height='162' width='135' /&gt;&lt;/p&gt;&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='2' height='29' width='473'&gt;
-					&lt;span class='gray14_33b'&gt;
-					&lt;span style='font-weight: 400;'&gt;
-						&lt;strong&gt;Dr. Tzu-Pin Lu&lt;/strong&gt;
-					&lt;/span&gt;
-					&lt;strong&gt;
-						&lt;a href='https://scholars.lib.ntu.edu.tw/cris/rp/rp06647' target='_blank'&gt;ç§å­å½¬&lt;/a&gt;
-						&lt;a href='https://scholars.lib.ntu.edu.tw/cris/rp/rp06647' target='_blank'&gt;
-						&lt;img src='images/maximize.png' width='20' height='15'/&gt;
-						&lt;/a&gt;
-					&lt;/strong&gt;
-					&lt;/span&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='2' height='29' width='473'&gt;
-					&lt;span class='gray14_33b'&gt;
-					&lt;strong&gt;
-						tplu@ntu.edu.tw
-						&lt;button class='btn ç§å­å½¬'&gt;
-						&lt;img src='images/email.png' width='20' height='15'tplu@ntu.edu.tw (Copy Email)/&gt;
-						&lt;/button&gt;
-					&lt;/strong&gt;
-					&lt;/span&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td class='gray14_33b' colspan='2'&gt;
-					&lt;span class='gray14_33b'&gt;Students:  &lt;img src='images/eligible_to_take_student(s).png' width='40' height='35'/&gt;&lt;/span&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='2' height='106'&gt;â  Bioinformatics
-					&lt;br&gt;â  Microarray and next generation sequencing data analysis 
-					&lt;br&gt;â  Computational Biology
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='3'&gt;&amp;nbsp;&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='3'&gt;&lt;strong&gt;Graduate Institute of Biomedical Electronics and Bioinformatics, National Taiwan University&lt;br&gt;
-					åç«èºç£å¤§å­¸ çé«é»å­èè³è¨å­¸ç ç©¶æ&lt;/strong&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td rowspan='5' style='width: 158px;'&gt;
-				&lt;p align='center'&gt;
-				&lt;img src='images/å°å¤§_æ¾å®é³³.jpg' height='162' width='135' /&gt;&lt;/p&gt;&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='2' height='29' width='473'&gt;
-					&lt;span class='gray14_33b'&gt;
-					&lt;span style='font-weight: 400;'&gt;
-						&lt;strong&gt;Dr. Yufeng Jane Tseng&lt;/strong&gt;
-					&lt;/span&gt;
-					&lt;strong&gt;
-						&lt;a href='https://www.cmdm.tw/' target='_blank'&gt;æ¾å®é³³&lt;/a&gt;
-						&lt;a href='https://www.cmdm.tw/' target='_blank'&gt;
-						&lt;img src='images/maximize.png' width='20' height='15'/&gt;
-						&lt;/a&gt;
-					&lt;/strong&gt;
-					&lt;/span&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='2' height='29' width='473'&gt;
-				&lt;span class='gray14_33b'&gt;
-					&lt;strong&gt;
-					yjtseng@csie.ntu.edu.tw 
-					&lt;button class='btn æ¾å®é³³'&gt;
-					&lt;img src='images/email.png' width='20' height='15'yjtseng@csie.ntu.edu.tw  (Copy Email)/&gt;
-					&lt;/button&gt;
-					&lt;/strong&gt;
-				&lt;/span&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td class='gray14_33b' colspan='2'&gt;
-				&lt;span class='gray14_33b'&gt;Students: &lt;img src='images/eligible_to_take_student(s).png' width='40' height='35'/&gt;&lt;/span&gt;&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='2' height='106'&gt;â  Computational Chemistry and Toxicology
-					&lt;br&gt;â  Metabolomics
-					&lt;br&gt;â  Bioinformatics
-					&lt;br&gt;â  Cheminformatics
-					&lt;br&gt;â  Health informatics
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='3'&gt;&amp;nbsp;&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='3'&gt;&lt;strong&gt;Department of Biomechatronics Engineering, National Taiwan University&lt;br&gt;
-					åç«èºç£å¤§å­¸ çç©æ©é»å·¥ç¨å­¸ç³»&lt;/strong&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td rowspan='5' style='width: 158px;'&gt;
-					&lt;p align='center'&gt;
-					&lt;img src='images/å°å¤§_é³å©ç.jpg' height='162' width='135' /&gt;
-					&lt;/p&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='2' height='29' width='473'&gt;
-					&lt;span class='gray14_33b'&gt;
-					&lt;span style='font-weight: 400;'&gt;
-						&lt;strong&gt;Dr. Chien-Yu Chen&lt;/strong&gt;
-					&lt;/span&gt;
-					&lt;strong&gt;
-						&lt;a href='https://www.bime.ntu.edu.tw/News_Photo_Content_n_69453_s_77664.html' target='_blank'&gt;é³å©ç&lt;/a&gt;
-						&lt;a href='https://www.bime.ntu.edu.tw/News_Photo_Content_n_69453_s_77664.html' target='_blank'&gt;
-						&lt;img src='images/maximize.png' width='20' height='15'/&gt;
-						&lt;/a&gt;
-					&lt;/strong&gt;
-					&lt;/span&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='2' height='29' width='473'&gt;
-					&lt;span class='gray14_33b'&gt;
-					&lt;strong&gt;
-						chienyuchen@ntu.edu.tw
-						&lt;button class='btn é³å©ç'&gt;
-						&lt;img src='images/email.png' width='20' height='15'chienyuchen@ntu.edu.tw (Copy Email)/&gt;
-						&lt;/button&gt;
-					&lt;/strong&gt;
-					&lt;/span&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td class='gray14_33b' colspan='2'&gt;
-				&lt;span class='gray14_33b'&gt;Students: &lt;img src='images/eligible_to_take_student(s).png' width='40' height='35'/&gt;&lt;/span&gt;&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='2' height='106'&gt;â  Bioinformatics
-					&lt;br&gt;â  Data Mining
-					&lt;br&gt;â  Machine Learning
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='3'&gt;&amp;nbsp;&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='3'&gt;&lt;strong&gt;Graduate Institute of Biomedical Electronics and Bioinformatics, National Taiwan University&lt;br&gt;
-					åç«èºç£å¤§å­¸ çé«é»å­èè³è¨å­¸ç ç©¶æ&lt;/strong&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td rowspan='5' style='width: 158px;'&gt;
-					&lt;p align='center'&gt;
-					&lt;img src='images/å°å¤§_èæå®.jpg' height='162' width='135' /&gt;
-					&lt;/p&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='2' height='29' width='473'&gt;
-					&lt;span class='gray14_33b'&gt;
-					&lt;span style='font-weight: 400;'&gt;
-						&lt;strong&gt;Dr. Eric Y. Chuang&lt;/strong&gt;
-					&lt;/span&gt;
-					&lt;strong&gt;
-						&lt;a href='https://www.ee.ntu.edu.tw/profile1.php?id=99' target='_blank'&gt;èæå®&lt;/a&gt;
-						&lt;a href='https://www.ee.ntu.edu.tw/profile1.php?id=99' target='_blank'&gt;
-						&lt;img src='images/maximize.png' width='20' height='15'/&gt;
-						&lt;/a&gt;
-					&lt;/strong&gt;
-					&lt;/span&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='2' height='29' width='473'&gt;
-				&lt;span class='gray14_33b'&gt;
-					&lt;strong&gt;
-					chuangey@ntu.edu.tw 
-					&lt;button class='btn èæå®'&gt;
-					&lt;img src='images/email.png' width='20' height='15'chuangey@ntu.edu.tw  (Copy Email)/&gt;
-					&lt;/button&gt;
-					&lt;/strong&gt;
-				&lt;/span&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td class='gray14_33b' colspan='2'&gt;
-					&lt;span class='gray14_33b'&gt;Students: Chayanika Goswami&lt;/span&gt;
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td colspan='2' height='106'&gt;â  Biochip Bioinformatics
-					&lt;br&gt;â  Next-Generation Sequencing                                                   
-					&lt;br&gt;â  Radiation Biology
-					&lt;br&gt;â  Cancer Biology
-					&lt;br&gt;â  Bioinformatics         
-				&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;/td&gt;
-			&lt;/tr&gt;
-
-			&lt;tr&gt;
-			&lt;td colspan='3'&gt;&amp;nbsp;&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-			&lt;td colspan='3'&gt;&lt;strong&gt;Institute of Biotechnology, National Taiwan University&lt;br&gt;
-			åç«èºç£å¤§å­¸  çç©ç§æç ç©¶æ&lt;/strong&gt;&lt;/td&gt;
-			&lt;/tr&gt;&lt;tr&gt;
-			&lt;td rowspan='5' style='width: 158px;'&gt;
-			&lt;p align='center'&gt;
-			&lt;img src='images/å°å¤§_è¡å­å³(new).jpg' height='162' width='135' /&gt;&lt;/p&gt;&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-			&lt;td colspan='2' height='29' width='473'&gt;
-			&lt;span class='gray14_33b'&gt;
-			&lt;span style='font-weight: 400;'&gt;
-			&lt;strong&gt;Dr. Mon-Hsun Tsai &lt;/strong&gt;
-			&lt;/span&gt;
-			&lt;strong&gt;
-			&lt;a href='https://iob.ntu.edu.tw/zh_tw/faculty/full/%E8%94%A1%E5%AD%9F%E5%8B%B3-1778238' target='_blank'&gt;è¡å­å³&lt;/a&gt;
-			&lt;a href='https://iob.ntu.edu.tw/zh_tw/faculty/full/%E8%94%A1%E5%AD%9F%E5%8B%B3-1778238' target='_blank'&gt;
-			&lt;img src='images/maximize.png' width='20' height='15'/&gt;
-			&lt;/a&gt;
-			&lt;/strong&gt;
-			&lt;/span&gt;
-			&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-			&lt;td colspan='2' height='29' width='473'&gt;
-			&lt;span class='gray14_33b'&gt;
-			&lt;strong&gt;
-			motiont@gmail.com
-			&lt;button class='btn è¡å­å³'&gt;
-			&lt;img src='images/email.png' width='20' height='15'motiont@gmail.com (Copy Email)
-			&lt;/img&gt;
-			&lt;/button&gt;
-			&lt;/strong&gt;
-			&lt;/span&gt;
-			&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-			&lt;td class='gray14_33b' colspan='2'&gt;
-			&lt;span class='gray14_33b'&gt;Students: &lt;img src='images/eligible_to_take_student(s).png' width='40' height='35'/&gt;&lt;/span&gt;&lt;/td&gt;
-			&lt;/tr&gt;
-
-			&lt;tr&gt;
-			&lt;td colspan='2' height='106'&gt;â  Bioinformatics
-			&lt;br&gt;â  Cell Biology
-			&lt;br&gt;â  Microarray
-			&lt;br&gt;â  Radiation Biology
-			&lt;/td&gt;
-			&lt;/tr&gt;
-
-			&lt;tr&gt;
-			&lt;td colspan='3'&gt;&amp;nbsp;&lt;/td&gt;
-			&lt;/tr&gt;
-
-			&lt;tr&gt;
-			&lt;td colspan='3'&gt;&amp;nbsp;&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-			&lt;td colspan='3'&gt;&lt;strong&gt;Institute of Molecular and Cellular Biology, National Taiwan University&lt;br&gt;
-			åç«èºç£å¤§å­¸ åå­èç´°èçç©å­¸ç ç©¶æ&lt;/strong&gt;&lt;/td&gt;
-			&lt;/tr&gt;&lt;tr&gt;
-			&lt;td rowspan='5' style='width: 158px;'&gt;
-			&lt;p align='center'&gt;
-			&lt;img src='images/å°å¤§_é»ç­±é.jpg' height='162' width='135' /&gt;&lt;/p&gt;&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-			&lt;td colspan='2' height='29' width='473'&gt;
-			&lt;span class='gray14_33b'&gt;
-			&lt;span style='font-weight: 400;'&gt;
-			&lt;strong&gt;Dr. Hsiao-Chun Huang&lt;/strong&gt;
-			&lt;/span&gt;
-			&lt;strong&gt;
-			&lt;a href='http://cell.lifescience.ntu.edu.tw/faculty/huang_hc.htm' target='_blank'&gt;é»ç­±é&lt;/a&gt;
-			&lt;a href='http://cell.lifescience.ntu.edu.tw/faculty/huang_hc.htm' target='_blank'&gt;
-			&lt;img src='images/maximize.png' width='20' height='15'/&gt;
-			&lt;/a&gt;
-			&lt;/strong&gt;
-			&lt;/span&gt;
-			&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-			&lt;td colspan='2' height='29' width='473'&gt;
-			&lt;span class='gray14_33b'&gt;
-			&lt;strong&gt;
-			hsiaochun@ntu.edu.tw
-			&lt;button class='btn é»ç­±é'&gt;
-			&lt;img src='images/email.png' width='20' height='15'hsiaochun@ntu.edu.tw (Copy Email)
-			&lt;/img&gt;
-			&lt;/button&gt;
-			&lt;/strong&gt;
-			&lt;/span&gt;
-			&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-			&lt;td class='gray14_33b' colspan='2'&gt;
-			&lt;span class='gray14_33b'&gt;Students: &lt;img src='images/eligible_to_take_student(s).png' width='40' height='35'/&gt;&lt;/span&gt;&lt;/td&gt;
-			&lt;/tr&gt;
-
-			&lt;tr&gt;
-			&lt;td colspan='2' height='106'&gt;â  Molecular Cell Biology
-			&lt;br&gt;â  Systems and Synthetic Biology
-			&lt;br&gt;â  Cell Division                  
-			&lt;/td&gt;
-			&lt;/tr&gt;
-
-			&lt;tr&gt;
-			&lt;td colspan='3'&gt;&amp;nbsp;&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-			&lt;td colspan='3'&gt;&lt;strong&gt;Department of Life Science, National Taiwan University&lt;br&gt;
-			åç«èºç£å¤§å­¸ çå½ç§å­¸ç³»&lt;/strong&gt;&lt;/td&gt;
-			&lt;/tr&gt;&lt;tr&gt;
-			&lt;td rowspan='5' style='width: 158px;'&gt;
-			&lt;p align='center'&gt;
-			&lt;img src='images/å°å¤§_é®éªè¬.jpg' height='162' width='135' /&gt;&lt;/p&gt;&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-			&lt;td colspan='2' height='29' width='473'&gt;
-			&lt;span class='gray14_33b'&gt;
-			&lt;span style='font-weight: 400;'&gt;
-			&lt;strong&gt;Dr. Hsueh-Fen Juan&lt;/strong&gt;
-			&lt;/span&gt;
-			&lt;strong&gt;
-			&lt;a href='http://jhlab.tw/' target='_blank'&gt;é®éªè¬&lt;/a&gt;
-			&lt;a href='http://jhlab.tw/' target='_blank'&gt;
-			&lt;img src='images/maximize.png' width='20' height='15'/&gt;
-			&lt;/a&gt;
-			&lt;/strong&gt;
-			&lt;/span&gt;
-			&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-			&lt;td colspan='2' height='29' width='473'&gt;
-			&lt;span class='gray14_33b'&gt;
-			&lt;strong&gt;
-			yukijuan@ntu.edu.tw
-			&lt;button class='btn é®éªè¬'&gt;
-			&lt;img src='images/email.png' width='20' height='15'yukijuan@ntu.edu.tw (Copy Email)
-			&lt;/img&gt;
-			&lt;/button&gt;
-			&lt;/strong&gt;
-			&lt;/span&gt;
-			&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-			&lt;td class='gray14_33b' colspan='2'&gt;
-			&lt;span class='gray14_33b'&gt;Students: &lt;img src='images/eligible_to_take_student(s).png' width='40' height='35'/&gt;&lt;/span&gt;&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-			&lt;td colspan='2' height='106'&gt;â  Genomics
-			&lt;br&gt;â  Bioinfomatics
-			&lt;br&gt;â  Proteomics   
-			&lt;/td&gt;
-			&lt;/tr&gt;
-
-			&lt;tr&gt;
-			&lt;td colspan='3'&gt;&amp;nbsp;&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-			&lt;td colspan='3'&gt;&lt;strong&gt;Graduate Institute of Biomedical Electronics and Bioinformatics, National Taiwan University&lt;br&gt;
-			åç«èºç£å¤§å­¸ çé«é»å­èè³è¨å­¸ç ç©¶æ&lt;/strong&gt;&lt;/td&gt;
-			&lt;/tr&gt;&lt;tr&gt;
-			&lt;td rowspan='5' style='width: 158px;'&gt;
-			&lt;p align='center'&gt;
-			&lt;img src='images/å°å¤§_é­å®ç¥º.jpg' height='162' width='135' /&gt;&lt;/p&gt;&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-			&lt;td colspan='2' height='29' width='473'&gt;
-			&lt;span class='gray14_33b'&gt;
-			&lt;span style='font-weight: 400;'&gt;
-			&lt;strong&gt;Dr. An-Chi Wei&lt;/strong&gt;
-			&lt;/span&gt;
-			&lt;strong&gt;
-			&lt;a href='https://www.ee.ntu.edu.tw/profile1.php?teacher_id=1050801' target='_blank'&gt;é­å®ç¥º&lt;/a&gt;
-			&lt;a href='https://www.ee.ntu.edu.tw/profile1.php?teacher_id=1050801' target='_blank'&gt;
-			&lt;img src='images/maximize.png' width='20' height='15'/&gt;
-			&lt;/a&gt;
-			&lt;/strong&gt;
-			&lt;/span&gt;
-			&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-			&lt;td colspan='2' height='29' width='473'&gt;
-			&lt;span class='gray14_33b'&gt;
-			&lt;strong&gt;
-			acwei86@ntu.edu.tw
-			&lt;button class='btn é­å®ç¥º'&gt;
-			&lt;img src='images/email.png' width='20' height='15'acwei86@ntu.edu.tw (Copy Email)
-			&lt;/img&gt;
-			&lt;/button&gt;
-			&lt;/strong&gt;
-			&lt;/span&gt;
-			&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-			&lt;td class='gray14_33b' colspan='2'&gt;
-			&lt;span class='gray14_33b'&gt;Students: &lt;img src='images/eligible_to_take_student(s).png' width='40' height='35'/&gt;&lt;/span&gt;&lt;/td&gt;
-			&lt;/tr&gt;
-
-			&lt;tr&gt;
-			&lt;td colspan='2' height='106'&gt;â  System Biology
-			&lt;br&gt;â  Modeling and Simulation of biological systems
-			&lt;br&gt;â  Bioenergetics and Metabolism
-			&lt;br&gt;â  Mitochondria 
-			&lt;/td&gt;
-			&lt;/tr&gt;
-            &lt;tr&gt;
-			&lt;td colspan='3'&gt;&amp;nbsp;&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;td colspan='3'&gt;&lt;strong&gt;The Graduate Institute of Medical Genomics and Proteomics, National Taiwan University&lt;br&gt;
-			åç«èºç£å¤§å­¸ åºå é«æ¨èç½é«é«å­¸ç ç©¶æ&lt;/strong&gt;&lt;/td&gt;
-			&lt;/tr&gt;&lt;tr&gt;
-			&lt;td rowspan='5' style='width: 158px;'&gt;
-			&lt;p align='center'&gt;
-			&lt;img src='images/å°å¤§_è¨±æ¸ç¿.jpg' height='162' width='135' /&gt;&lt;/p&gt;&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-			&lt;td colspan='2' height='29' width='473'&gt;
-			&lt;span class='gray14_33b'&gt;
-			&lt;span style='font-weight: 400;'&gt;
-			&lt;strong&gt;Dr. Shu-Jui Hsu&lt;/strong&gt;
-			&lt;/span&gt;
-			&lt;strong&gt;
-			&lt;a href='https://www.mc.ntu.edu.tw/medgenpro/Vcard.action?q_type=-1&amp;q_itemCode=1100&amp;l=en_US' target='_blank'&gt;è¨±æ¸ç¿&lt;/a&gt;
-			&lt;a href='https://www.mc.ntu.edu.tw/medgenpro/Vcard.action?q_type=-1&amp;q_itemCode=1100&amp;l=en_US' target='_blank'&gt;
-			&lt;img src='images/maximize.png' width='20' height='15'/&gt;
-			&lt;/a&gt;
-			&lt;/strong&gt;
-			&lt;/span&gt;
-			&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-			&lt;td colspan='2' height='29' width='473'&gt;
-			&lt;span class='gray14_33b'&gt;
-			&lt;strong&gt;
-			jacobhsu@ntu.edu.tw
-			&lt;button class='btn è¨±æ¸ç¿'&gt;
-			&lt;img src='images/email.png' width='20' height='15'jacobhsu@ntu.edu.tw (Copy Email)
-			&lt;/img&gt;
-			&lt;/button&gt;
-			&lt;/strong&gt;
-			&lt;/span&gt;
-			&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-			&lt;td class='gray14_33b' colspan='2'&gt;
-			&lt;span class='gray14_33b'&gt;Students: &lt;/span&gt;&lt;/td&gt;
-			&lt;/tr&gt;
-
-			&lt;tr&gt;
-			&lt;td colspan='2' height='106'&gt;â  Human Genomics
-			&lt;br&gt;â  Statistical Genetics
-			&lt;br&gt;â  Bioinformatics
-			&lt;br&gt;â  Genome Medicine
-			&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-			&lt;td colspan='3'&gt;&amp;nbsp;&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-			&lt;td colspan='3'&gt;&amp;nbsp;&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;td colspan='3'&gt;&lt;strong&gt; Electrical Engineering Department, National Taiwan University&lt;br&gt;
-			åç«èºç£å¤§å­¸ é»æ©å·¥ç¨å­¸ç³»&lt;/strong&gt;&lt;/td&gt;
-			&lt;/tr&gt;&lt;tr&gt;
-			&lt;td rowspan='5' style='width: 158px;'&gt;
-			&lt;p align='center'&gt;
-			&lt;img src='images/å°å¤§_åå­æ¯.jpg' height='162' width='135' /&gt;&lt;/p&gt;&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-			&lt;td colspan='2' height='29' width='473'&gt;
-			&lt;span class='gray14_33b'&gt;
-			&lt;span style='font-weight: 400;'&gt;
-			&lt;strong&gt;Dr. Joyce Tzu-Yu Liu&lt;/strong&gt;
-			&lt;/span&gt;
-			&lt;strong&gt;
-			&lt;a href='https://www.ee.ntu.edu.tw/profile1.php?teacher_id=26592&amp;p=3' target='_blank'&gt;åå­æ¯&lt;/a&gt;
-			&lt;a href='https://www.ee.ntu.edu.tw/profile1.php?teacher_id=26592&amp;p=3' target='_blank'&gt;
-			&lt;img src='images/maximize.png' width='20' height='15'/&gt;
-			&lt;/a&gt;
-			&lt;/strong&gt;
-			&lt;/span&gt;
-			&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-			&lt;td colspan='2' height='29' width='473'&gt;
-			&lt;span class='gray14_33b'&gt;
-			&lt;strong&gt;
-			joyliu@ntu.edu.tw
-			&lt;button class='btn åå­æ¯'&gt;
-			&lt;img src='images/email.png' width='20' height='15'joyliu@ntu.edu.tw (Copy Email)
-			&lt;/img&gt;
-			&lt;/button&gt;
-			&lt;/strong&gt;
-			&lt;/span&gt;
-			&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-			&lt;td class='gray14_33b' colspan='2'&gt;
-			&lt;span class='gray14_33b'&gt;Students: &lt;/span&gt;&lt;/td&gt;
-			&lt;/tr&gt;
-
-			&lt;tr&gt;
-			&lt;td colspan='2' height='106'&gt;â  Functional data analysis
-			&lt;br&gt;â  Transfer learning
-			&lt;br&gt;â  Multi-task learning
-			&lt;br&gt;â  Data fusion
-			&lt;br&gt;â  Generative model
-			&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-			&lt;td colspan='3'&gt;&amp;nbsp;&lt;/td&gt;
-			&lt;/tr&gt;
-		&lt;/tbody&gt;
-		&lt;/table&gt;
-	&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;a href="#toptop" class="colorroyblue1"&gt;
-    &lt;button id="goBackBtn" class="colorroyblue"&gt;
-        &lt;i&gt;TOP&lt;/i&gt;
-    &lt;/button&gt;
-&lt;/a&gt;
-
-&lt;!-- Footer Start --&gt;
-&lt;footer&gt;
-    &lt;div class="footer-end bg-dark py-2"&gt;
-        &lt;p class="text-center footerfont"&gt;Bioinformatics Program, TIGP , Academia Sinica , Taiwan&lt;br/&gt;
-		Â© 2023 Academia Sinica Copyright&lt;/p&gt;
-    &lt;/div&gt;
-&lt;/footer&gt;
-&lt;!-- Footer End --&gt;
-&lt;script type="text/javascript"&gt;
-
-    var coll = document.getElementsByClassName("collapsible");
-    var i;
-
-    for (i = 0; i &lt; coll.length; i++) {
-        coll[i].addEventListener("click", function () {
-            this.classList.toggle("active");
-            var content = this.nextElementSibling;
-            var body = document.getElementsByTagName("body")[0]
-
-            if (content.style.maxHeight) {
-                content.style.maxHeight = null;
-                body.style.overflow = "scroll";
-            } else {
-                content.style.overflow = "hidden";
-                content.style.maxHeight = content.scrollHeight + "px";
-
-            }
-        });
-    }
-&lt;/script&gt;
-&lt;script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"&gt;&lt;/script&gt;
-&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"&gt;&lt;/script&gt;
-&lt;script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"&gt;&lt;/script&gt;
-&lt;script type="text/javascript"&gt;
-
-&lt;/script&gt;
-
-
-&lt;script type="text/javascript"&gt;
-    $('#news').on('click', function () {
-        $("#accordion_fellowship").hide();
-        $("#accordion_honor_awards").hide();
-        $("#accordion_references").hide();
-        $("#accordion_news").show();
-
-
-    });
-
-    $('#fellowship').on('click', function () {
-        $("#accordion_news").hide();
-        $("#accordion_honor_awards").hide();
-        $("#accordion_references").hide();
-        $("#accordion_fellowship").show();
-
-    });
-
-    $('#honor_awards').on('click', function () {
-        $("#accordion_news").hide();
-        $("#accordion_fellowship").hide();
-        $("#accordion_references").hide();
-        $("#accordion_honor_awards").show();
-
-    });
-
-    $('#references').on('click', function () {
-        $("#accordion_news").hide();
-        $("#accordion_fellowship").hide();
-        $("#accordion_honor_awards").hide();
-        $("#accordion_references").show();
-
-    });
-&lt;/script&gt;
-
-&lt;/body&gt;
-
-&lt;/html&gt;
-
-</pre>
-</div>
-</div>
-</div>
-</div>
-</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=a50126e5">
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=920a150a">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [18]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [16]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">match</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="sa">r</span><span class="s2">"&lt;title&gt;(.*?)&lt;/title&gt;"</span><span class="p">,</span> <span class="n">html_content</span><span class="p">,</span> <span class="n">re</span><span class="o">.</span><span class="n">S</span><span class="p">)</span> <span class="c1">#re.DOTALL</span>
@@ -11129,12 +8100,12 @@ Hello World, This Is Python Regex.
 </div>
 </div>
 </div>
-</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=8f85c9d7">
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=9cdd6c69">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [19]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [17]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># clean up the html content</span>
@@ -11164,7 +8135,7 @@ Hello World, This Is Python Regex.
 </div>
 </div>
 </div></section><section>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=abc1a520">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=0ab90fbe">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -11214,12 +8185,12 @@ Hello World, This Is Python Regex.
 </div>
 </div>
 </div>
-</div></section></section><section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=315337e1">
+</div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=472e542f">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [20]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [18]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">output_name_email</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="n">name_email_re</span><span class="p">,</span> <span class="n">html</span><span class="p">)</span>
@@ -11244,21 +8215,7 @@ Hello World, This Is Python Regex.
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=4ebcc2e7">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-</div></section></section>
+</div></div></section></section>
 </div>
 </div>
 </main>
